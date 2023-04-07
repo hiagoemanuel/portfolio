@@ -9,19 +9,16 @@ export const GlobalStyle = createGlobalStyle`
 
         color: var(--primary-color);
     }
+    body {
+        width: 100vw;
+        height: 100vh;
+    }
 
     #root {
-        max-width: 100vw;
-        max-height: 100vh;
-
-        display: grid;
-        grid-template-areas: 'header content';
-        justify-content: flex-start;
+        width: 100vw;
+        height: 100vh;
+        padding: 0 0 0 150px;
 
         background-color: var(--secondary-color);
     }
-
-    header { grid-area: 'header'; }    
-
-    main { grid-area: 'content'; }
 `

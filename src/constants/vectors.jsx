@@ -1,5 +1,5 @@
-export const LogoIcon = () => (
-    <svg width="65" height="71" viewBox="0 0 65 71" fill="none" xmlns="http://www.w3.org/2000/svg">
+export const LogoIcon = ({ propClass }) => (
+    <svg className={ propClass } /* width="65" height="71" */ viewBox="0 0 65 71" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g clipPath="url(#clip0_39_50)">
             <path d="M38.8185 0.192917V49.7938H31.8635V28.4094H7.94353V49.7938H0.988525V0.192917H7.94353V21.4407H31.8635V0.192917H38.8185Z" fill="var(--secondary-color)" />
             <path d="M31.8532 21.3991H62.8582V28.4362H38.8082V42.5786H60.1932V49.6156H38.8082V63.963H63.7682V71H31.8532V21.3991Z" fill="var(--secondary-color)" />
