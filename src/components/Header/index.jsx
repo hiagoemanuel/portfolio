@@ -1,16 +1,18 @@
-import { MainTheme } from './MainTheme'
+import { MainThemes } from './MainThemes'
 import { LogoIcon } from '../../constants/vectors'
 import { HeaderStyle } from './style.js'
 import { MenuHamburger } from './MenuHamburger'
 import { NavigationHeader } from './NavigationHeader'
+import { Responsive } from './responsive'
 
 export const Header = () => {
     return (
         <HeaderStyle>
+            <Responsive />
             <LogoIcon propClass='logo-icon' />
             <MenuHamburger />
             <NavigationHeader />
-            <MainTheme />
+            <MainThemes />
         </HeaderStyle>
     )
 }

@@ -13,4 +13,9 @@ export const Reset = createGlobalStyle`
     }
 
     li { list-style-type: none; }
+
+    button {
+        background-color: transparent;
+        border: none;   
+    }
 `

@@ -3,7 +3,6 @@ import { ThemeContext } from './contexts/themes';
 import { AppRoutes } from './pages/router';
 import { GlobalStyle } from './styles/global-style';
 import { Reset } from './styles/reset';
-import { Responsive } from './styles/responsive';
 import { Variables } from './styles/variables';
 
 const App = () => {
@@ -13,7 +12,6 @@ const App = () => {
     <>
       <GlobalStyle />
       <Variables theme={mainTheme} />
-      <Responsive />
       <Reset />
 
       <AppRoutes />

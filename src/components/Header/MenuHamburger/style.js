@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const Menu = styled.div`
+export const HamburgerStyle = styled.div`
     width: 70px;
     height: 70px;
 

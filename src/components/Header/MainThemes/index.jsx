@@ -1,12 +1,12 @@
 import { useContext, useEffect, useRef } from 'react'
 import { ThemeContext, theme } from '../../../contexts/themes'
 import { DarkModeIcon, LightModeIcon } from '../../../constants/vectors'
-import { ButtonStyle } from './style'
+import { ThemeButtonStyle } from './style'
 
 let darkButton
 let lightButton
 
-export const MainTheme = () => {
+export const MainThemes = () => {
     const { mainTheme, setMainTheme } = useContext(ThemeContext)
     const themeButtons = useRef()
 
@@ -29,9 +29,9 @@ export const MainTheme = () => {
     }, [mainTheme])
 
     return (
-        <ButtonStyle ref={themeButtons}>
+        <ThemeButtonStyle ref={themeButtons}>
             <DarkModeIcon />
             <LightModeIcon />
-        </ButtonStyle>
+        </ThemeButtonStyle>
     )
 }

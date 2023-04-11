@@ -1,0 +1,82 @@
+import { createGlobalStyle } from 'styled-components'
+
+import { HeaderStyle } from './style'
+import { HamburgerStyle } from './MenuHamburger/style'
+import { ThemeButtonStyle } from './MainThemes/style'
+
+export const Responsive = createGlobalStyle`
+    @media (max-width: 744px) {
+        #root { padding: 100px 0 0 0;}
+
+        ${HeaderStyle} {
+            width: 100vw;
+            height: 100px;
+            padding: 15px 50px;
+
+            flex-direction: row;
+
+            ${ThemeButtonStyle}, nav { display: none; }
+
+            ${HamburgerStyle} { display: flex; }
+
+            &.menu-active {
+                width: 100vw;
+                height: 100vh;
+                padding: 50px 30px 30px 30px;
+
+                flex-direction: column;
+                overflow: hidden;
+
+                .logo-icon { max-width: 12rem; }
+
+                ${ThemeButtonStyle}, nav {
+                    display: block;
+                }
+
+                nav { width: auto; }
+                
+                ${HamburgerStyle} {
+                    position: absolute;
+                    top: 15px;
+                    right: 50px;
+
+                    .line-1 { transform: rotate(45deg) translate(30%, 22px); }
+                    .line-2 { opacity: 0; }
+                    .line-3 { transform: rotate(-45deg) translate(30%, -22px); }
+                }
+            }
+        }
+    }
+
+    @media (max-width: 400px) {
+        #root { padding: 60px 0 0 0;}
+
+        ${HeaderStyle} {
+            height: 60px;
+            padding: 15px 20px;
+
+            .logo-icon { width: 30px; }
+
+            ${HamburgerStyle} {
+                width: 30px;
+                height: 30px;
+
+                .line-1, .line-2, .line-3 { height: 5px; }
+            }
+
+            &.menu-active {
+                .logo-icon { width: 10rem; }
+
+                nav { font-size: 48rem; }
+
+                ${HamburgerStyle} {
+                    top: 15px;
+                    right: 20px;
+
+                    .line-1 { transform: rotate(45deg) translate(30%, 9px); }
+                    .line-3 { transform: rotate(-45deg) translate(30%, -9px); }
+                }
+            }
+        }
+    }
+`

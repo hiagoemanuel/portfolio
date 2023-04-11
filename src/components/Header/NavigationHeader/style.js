@@ -14,7 +14,7 @@ export const List = styled.ul`
 
         transition: all 0.3s 0.125s ease-out;
         background-image: linear-gradient(-30deg,  transparent 50%, var(--secondary-color) 0);
-        background-size: 298%;
+        background-size: 310%;
         background-position: 100%;
         @media (min-width: 744px) {
             &:hover {

@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const ButtonStyle = styled.div`
+export const ThemeButtonStyle = styled.div`
     align-self: flex-start;
 
     .hidden { display: none; }
