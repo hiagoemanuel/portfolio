@@ -6,5 +6,6 @@ export const Variables = createGlobalStyle`
 
         --primary-color: ${props => props.theme.primaryColor};
         --secondary-color: ${props => props.theme.secondaryColor};
+        --tertiary-color: #808080;
     }
 `
