@@ -6,3 +6,12 @@ export const Container = styled.div`
     align-items: center;
     gap: 25px;
 `
+
+export const Illustration = styled.div`
+    width: 400px;
+    height: 450px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+`

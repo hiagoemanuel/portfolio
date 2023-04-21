@@ -28,4 +28,4 @@ const Whale = () => (
     </svg>
 )
 
-export const illustration = { Deer, Macaw, Bear, Bird, Whale }
+export const illustration = [Deer, Macaw, Bear, Bird, Whale]

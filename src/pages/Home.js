@@ -1,12 +1,15 @@
 import styled from "styled-components";
 import { Presetation } from "../components/Presentation";
 import { Carousel } from "../components/Carousel";
+import { CarouselProvider } from "../contexts/current-carousel";
 
 export const Home = () => (
     <ContainerContent>
         <Presetation />
-        <Carousel />
-    </ContainerContent> 
+        <CarouselProvider>
+            <Carousel />
+        </CarouselProvider>
+    </ContainerContent>
 )
 
 const ContainerContent = styled.section`

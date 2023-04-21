@@ -37,12 +37,13 @@ export const PauseButton = () => (
 
 )
 
-export const NextButton = () => (
-    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M0 0V16L8 8L0 0ZM8 0V16L16 8L8 0Z" fill="var(--primary-color)" />
-    </svg>
-
-)
+export const NextButton = () => {
+    return (
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 0V16L8 8L0 0ZM8 0V16L16 8L8 0Z" fill="var(--primary-color)" />
+        </svg>
+    )
+}
 
 export const PreviousButton = () => (
     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
