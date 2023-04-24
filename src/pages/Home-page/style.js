@@ -1,6 +1,12 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const Content = styled.section`
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+`
+
+export const Presentation = styled.div`
     display: flex;
     flex-direction: column;
     gap: 15px;

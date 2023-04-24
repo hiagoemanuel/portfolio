@@ -1,11 +1,12 @@
-import styled from "styled-components";
 import { Carousel } from "../../components/Carousel";
 import { CarouselProvider } from "../../contexts/current-carousel";
-import { Container, Occupation, Salutation } from "./style"
+import { Content, Presentation, Occupation, Salutation } from "./style"
+import { Responsive } from "./responsive";
 
 export const Home = () => (
     <Content>
-        <Container>
+        <Responsive />
+        <Presentation>
             <Salutation>
                 Olá,<br />
                 eu sou<br />
@@ -14,15 +15,11 @@ export const Home = () => (
             <Occupation>
                 Front-end Developer
             </Occupation>
-        </Container>
+        </Presentation>
         <CarouselProvider>
             <Carousel />
         </CarouselProvider>
     </Content>
 )
 
-const Content = styled.section`
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-`
+

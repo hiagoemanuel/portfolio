@@ -26,4 +26,5 @@ const Container = styled.main`
     padding: 5%;
 
     display: grid;
+    overflow-x: hidden;
 `
