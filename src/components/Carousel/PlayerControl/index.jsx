@@ -1,8 +1,8 @@
 import { useContext, useRef, useState } from "react"
-import { PreviousButton, PauseButton, NextButton, PlayButton, } from "../../../constants/vectors"
+import { PreviousButton, PauseButton, NextButton, PlayButton, } from "../../../constants/icons"
 import { Container, Bar, Controls } from "./style"
 import { CarouselContext } from "../../../contexts/current-carousel"
-import { illustration } from "../../../constants/illustrations"
+import { illustration } from "../../../constants/carousel-illustrations"
 import { ProgressBar } from "./ProgressBar"
 
 export const PlayerControl = () => {

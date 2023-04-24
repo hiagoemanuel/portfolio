@@ -1,6 +1,6 @@
 import { useContext, useEffect, useRef } from 'react'
 import { ThemeContext, theme } from '../../../contexts/themes'
-import { DarkModeIcon, LightModeIcon } from '../../../constants/vectors'
+import { DarkModeIcon, LightModeIcon } from '../../../constants/icons'
 import { ThemeButtonStyle } from './style'
 
 let darkButton

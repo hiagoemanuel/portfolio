@@ -1,0 +1,52 @@
+export const LogoIcon = ({ propClass }) => (
+    <svg className={propClass} /* width="65" height="71" */ viewBox="0 0 65 71" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <g clipPath="url(#clip0_39_50)">
+            <path d="M38.8185 0.192917V49.7938H31.8635V28.4094H7.94353V49.7938H0.988525V0.192917H7.94353V21.4407H31.8635V0.192917H38.8185Z" fill="var(--secondary-color)" />
+            <path d="M31.8532 21.3991H62.8582V28.4362H38.8082V42.5786H60.1932V49.6156H38.8082V63.963H63.7682V71H31.8532V21.3991Z" fill="var(--secondary-color)" />
+        </g>
+        <defs>
+            <clipPath id="clip0_39_50">
+                <rect width="65" height="71" fill="var(--secondary-color)" />
+            </clipPath>
+        </defs>
+    </svg>
+)
+
+export const DarkModeIcon = () => (
+    <svg width="20" height="20" viewBox="0 0 18 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9 21C6.5 21 4.375 19.9792 2.625 17.9375C0.875 15.8958 0 13.4167 0 10.5C0 7.58333 0.875 5.10417 2.625 3.0625C4.375 1.02083 6.5 0 9 0C9.23333 0 9.46267 0.00972233 9.688 0.0291668C9.91267 0.0486112 10.1333 0.0777777 10.35 0.116667C9.66667 0.680555 9.121 1.41439 8.713 2.31817C8.30433 3.22272 8.1 4.2 8.1 5.25C8.1 7 8.625 8.4875 9.675 9.7125C10.725 10.9375 12 11.55 13.5 11.55C14.4167 11.55 15.2583 11.3116 16.025 10.8348C16.7917 10.3588 17.4167 9.72222 17.9 8.925C17.9333 9.17778 17.9583 9.43522 17.975 9.69733C17.9917 9.96022 18 10.2278 18 10.5C18 13.4167 17.125 15.8958 15.375 17.9375C13.625 19.9792 11.5 21 9 21Z" fill="white" />
+    </svg>
+)
+
+export const LightModeIcon = () => (
+    <svg width="20" height="20" viewBox="0 0 18 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M9 15.2727C7.86818 15.2727 6.90355 14.8072 6.10609 13.8762C5.30809 12.9459 4.90909 11.8205 4.90909 10.5C4.90909 9.17955 5.30809 8.05382 6.10609 7.12282C6.90355 6.19245 7.86818 5.72727 9 5.72727C10.1318 5.72727 11.0967 6.19245 11.8947 7.12282C12.6922 8.05382 13.0909 9.17955 13.0909 10.5C13.0909 11.8205 12.6922 12.9459 11.8947 13.8762C11.0967 14.8072 10.1318 15.2727 9 15.2727ZM0 11.4545V9.54545H3.27273V11.4545H0ZM14.7273 11.4545V9.54545H18V11.4545H14.7273ZM8.18182 3.81818V0H9.81818V3.81818H8.18182ZM8.18182 21V17.1818H9.81818V21H8.18182ZM4.37727 6.44318L2.35227 4.08068L3.49773 2.74432L5.52273 5.10682L4.37727 6.44318ZM14.5023 18.2557L12.4773 15.8932L13.6227 14.5568L15.6477 16.9193L14.5023 18.2557ZM13.6227 6.44318L12.4773 5.10682L14.5023 2.74432L15.6477 4.08068L13.6227 6.44318ZM3.49773 18.2557L2.35227 16.9193L4.37727 14.5568L5.52273 15.8932L3.49773 18.2557Z" fill="black" />
+    </svg>
+)
+
+export const PlayButton = () => (
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 0L20 10L0 20V0Z" fill="var(--primary-color)" />
+    </svg>
+)
+
+export const PauseButton = () => (
+    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M0 0H6V20H0V0ZM14 0H20V20H14V0Z" fill="var(--primary-color)" />
+    </svg>
+
+)
+
+export const NextButton = () => {
+    return (
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M0 0V16L8 8L0 0ZM8 0V16L16 8L8 0Z" fill="var(--primary-color)" />
+        </svg>
+    )
+}
+
+export const PreviousButton = () => (
+    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16 0V16L8 8L16 0ZM8 0V16L0 8L8 0Z" fill="var(--primary-color)" />
+    </svg>
+)

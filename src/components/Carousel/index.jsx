@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { illustration } from "../../constants/illustrations";
+import { illustration } from "../../constants/carousel-illustrations";
 import { CarouselContext } from "../../contexts/current-carousel";
 import { PlayerControl } from "./PlayerControl";
 import { Container, Illustration } from "./style"

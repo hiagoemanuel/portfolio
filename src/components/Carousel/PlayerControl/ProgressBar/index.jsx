@@ -1,7 +1,7 @@
 import { useContext, useEffect } from "react"
 import { ProgressBarStyle } from './style'
 import { CarouselContext } from "../../../../contexts/current-carousel"
-import { illustration } from "../../../../constants/illustrations"
+import { illustration } from "../../../../constants/carousel-illustrations"
 
 
 export const ProgressBar = ({ pauseStatus, bar }) => {
