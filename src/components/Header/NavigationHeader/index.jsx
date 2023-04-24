@@ -7,13 +7,10 @@ export const NavigationHeader = () => {
     const navList = useRef()
 
     useEffect(() => {
-        const ListItems = navList.current.childNodes
         const menuActive = document.getElementsByTagName('header')[0]
-        
-        ListItems.forEach((item) => {
-            item.addEventListener('click', () => {
-                if (menuActive) menuActive.classList.remove('menu-active')
-            })
+
+        navList.current.addEventListener('click', () => {
+            if (menuActive) menuActive.classList.remove('menu-active')
         })
     }, [])
 

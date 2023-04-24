@@ -12,7 +12,7 @@ export const List = styled.ul`
         
         cursor: pointer;
 
-        transition: all 0.3s 0.125s ease-out;
+        transition: background 0.3s 0.125s ease-out, color 0.3s 0.125s ease-out;
         background-image: linear-gradient(-30deg,  transparent 50%, var(--secondary-color) 0);
         background-size: 310%;
         background-position: 100%;

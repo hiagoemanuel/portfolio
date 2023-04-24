@@ -5,7 +5,7 @@ import { HamburgerStyle } from './MenuHamburger/style'
 import { ThemeButtonStyle } from './MainThemes/style'
 
 export const Responsive = createGlobalStyle`
-    @media (max-width: 744px) {
+    @media (max-width: 1000px) {
         #root { padding: 100px 0 0 0;}
 
         ${HeaderStyle} {
@@ -14,7 +14,6 @@ export const Responsive = createGlobalStyle`
             padding: 15px 50px;
 
             flex-direction: row;
-
             ${ThemeButtonStyle}, nav { display: none; }
 
             ${HamburgerStyle} { display: flex; }
@@ -26,6 +25,7 @@ export const Responsive = createGlobalStyle`
 
                 flex-direction: column;
                 overflow: hidden;
+                z-index: 1000;
 
                 .logo-icon { max-width: 12rem; }
 

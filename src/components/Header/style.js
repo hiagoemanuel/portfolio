@@ -16,10 +16,7 @@ export const HeaderStyle = styled.header`
     
     background-color: var(--primary-color);
 
-    .logo-icon {
-        max-width: 65px;
-        transition: 0.3s;
-    }
+    .logo-icon { max-width: 65px; }
 
     nav { width: calc(100% + 30px); }
 `
