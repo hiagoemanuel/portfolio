@@ -5,4 +5,12 @@ export const MainTitle = styled.h1`
 
     font-size: 6rem;
     font-weight: 700;
+
+    @media (max-width: 1000px) {
+        font-size: 7.2rem;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    @media(max-width: 580px) { font-size: 3.6rem; }
 `

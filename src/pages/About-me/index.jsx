@@ -2,9 +2,11 @@ import { FoxIllustration } from "../../constants/vectors"
 import { MainTitle } from "../../styles/global-components"
 import { Container, MainContent, Discription, ProfilePhoto } from "./style"
 import profile_photo from '../../images/profile-photo.jpg'
+import { Responsive } from "./responsive"
 
 export const AboutMe = () => (
     <Container>
+        <Responsive />
         <MainTitle>Sobre Mim</MainTitle>
         <MainContent>
             <ProfilePhoto src={profile_photo} alt="profile_photo" />

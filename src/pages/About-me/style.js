@@ -14,7 +14,7 @@ export const MainContent = styled.div`
 `
 
 export const ProfilePhoto = styled.img`
-    max-width: 35%;
+    max-width: 50%;
     margin: 25px 0 0 25px;
 
     box-shadow: -25px -25px var(--primary-color);
@@ -22,7 +22,7 @@ export const ProfilePhoto = styled.img`
 `
 
 export const Discription = styled.div`
-    max-width: 590px;
+    width: 590px;
 
     p {
         font-size: 2.4rem;
