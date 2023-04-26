@@ -4,6 +4,8 @@ import { Header } from '../components/Header'
 
 import { Home } from './Home-page'
 import { AboutMe } from './About-me'
+import { Projects } from './Projects'
+import { ProjectDetails } from './Projects/ProjectDetails'
 
 export const AppRoutes = () => (
     <BrowserRouter>
@@ -12,9 +14,11 @@ export const AppRoutes = () => (
             <Routes>
                 <Route element={<Home />} exact path='/' />
                 <Route element={<AboutMe />} path='/about-me' />
-                <Route element={<h1>Projects</h1>} path='/projects' />
+                <Route element={<Projects />} path='/projects' />
                 <Route element={<h1>Skills</h1>} path='/skills' />
                 <Route element={<h1>Contact</h1>} path='/contact' />
+
+                <Route element={<ProjectDetails />} path='/projects/:id' />
             </Routes>
         </Container>
     </BrowserRouter>
@@ -26,5 +30,6 @@ const Container = styled.main`
     padding: 5%;
 
     display: grid;
+    position: relative;
     overflow-x: hidden;
 `
