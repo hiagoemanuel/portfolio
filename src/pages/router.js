@@ -10,7 +10,7 @@ import { ProjectDetails } from './Projects/ProjectDetails'
 export const AppRoutes = () => (
     <BrowserRouter>
         <Header />
-        <Container>
+        <MainContainer>
             <Routes>
                 <Route element={<Home />} exact path='/' />
                 <Route element={<AboutMe />} path='/about-me' />
@@ -20,16 +20,19 @@ export const AppRoutes = () => (
 
                 <Route element={<ProjectDetails />} path='/projects/:id' />
             </Routes>
-        </Container>
+        </MainContainer>
     </BrowserRouter>
 )
 
-const Container = styled.main`
-    width: 100%;
+const MainContainer = styled.main`
     height: 100%;
     padding: 5%;
+    margin: 0 0 0 150px;
 
     display: grid;
     position: relative;
     overflow-x: hidden;
+
+    @media (max-width: 1000px) { margin: 100px 0 0 0; }
+    @media (max-width: 400px) { margin: 60px 0 0 0; }
 `

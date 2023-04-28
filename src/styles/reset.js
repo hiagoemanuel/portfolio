@@ -8,7 +8,7 @@ export const Reset = createGlobalStyle`
     }
 
     a {
-        color: #000000;
+        color: var(--primary-color);
         text-decoration: none;
     }
 

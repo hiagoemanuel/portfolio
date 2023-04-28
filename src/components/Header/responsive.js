@@ -6,8 +6,6 @@ import { ThemeButtonStyle } from './MainThemes/style'
 
 export const Responsive = createGlobalStyle`
     @media (max-width: 1000px) {
-        #root { padding: 100px 0 0 0;}
-
         ${HeaderStyle} {
             width: 100vw;
             height: 100px;
@@ -55,8 +53,6 @@ export const Responsive = createGlobalStyle`
     }
 
     @media (max-width: 400px) {
-        #root { padding: 60px 0 0 0;}
-
         ${HeaderStyle} {
             height: 60px;
             padding: 15px 20px;
