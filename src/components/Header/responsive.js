@@ -19,7 +19,7 @@ export const Responsive = createGlobalStyle`
             &.menu-active {
                 width: 100vw;
                 height: 100vh;
-                padding: 50px 30px 30px 30px;
+                padding: 50px 30px;
 
                 background-color: var(--secondary-color);
                 ul li a, path {

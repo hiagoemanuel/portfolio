@@ -6,6 +6,8 @@ export const MainTitle = styled.h1`
     font-size: 6rem;
     font-weight: 700;
 
+    align-self: center;
+
     @media (max-width: 1000px) {
         font-size: 7.2rem;
         text-align: center;

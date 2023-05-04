@@ -8,6 +8,7 @@ export const HeaderStyle = styled.header`
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 1000;
 
     display: flex;
     flex-direction: column;

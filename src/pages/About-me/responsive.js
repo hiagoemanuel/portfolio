@@ -6,6 +6,7 @@ export const Responsive = createGlobalStyle`
         
         ${MainContent} {
             flex-direction: column-reverse;
+            justify-content: flex-end;
             align-items: center;
         }
 

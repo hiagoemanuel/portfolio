@@ -9,17 +9,6 @@ export const GlobalStyle = createGlobalStyle`
 
         color: var(--primary-color);
     }
-    body {
-        width: 100vw;
-        height: 100vh;
-    }
-
-    #root {
-        width: 100vw;
-        height: 100vh;
-
-        background-color: var(--secondary-color);
-    }
 
     *::-webkit-scrollbar { width: 6px; }
     

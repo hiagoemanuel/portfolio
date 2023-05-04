@@ -25,7 +25,8 @@ export const AppRoutes = () => (
 )
 
 const MainContainer = styled.main`
-    height: 100%;
+    width: calc(100vw - 150px);
+    height: 100vh;
     padding: 5%;
     margin: 0 0 0 150px;
 
@@ -33,6 +34,15 @@ const MainContainer = styled.main`
     position: relative;
     overflow-x: hidden;
 
-    @media (max-width: 1000px) { margin: 100px 0 0 0; }
-    @media (max-width: 400px) { margin: 60px 0 0 0; }
+    background-color: var(--secondary-color);
+
+    @media (max-width: 1000px) {
+        width: 100vw;
+        height: calc(100vh - 100px);
+        margin: 100px 0 0 0;
+    }
+    @media (max-width: 400px) {
+        height: calc(100vh - 60px);
+        margin: 60px 0 0 0;
+    }
 `

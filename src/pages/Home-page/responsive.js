@@ -21,12 +21,14 @@ export const Responsive = createGlobalStyle`
     }
 
     @media (max-width: 450px) {
-        ${Salutation} { font-size: 3.6rem; }
-        ${Occupation} { font-size: 1.6rem; }
+        ${Content} { justify-content: space-evenly; }
+
+        ${Salutation} { font-size: 4rem; }
+        ${Occupation} { font-size: 2rem; }
 
         ${Illustration} {
-            width: 170px;
-            height: 190px;
+            width: 200px;
+            height: 210px;
         }        
     }
 `
