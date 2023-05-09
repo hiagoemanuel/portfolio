@@ -10,6 +10,8 @@ export const Responsive = createGlobalStyle`
             align-items: center;
         }
 
+        ${ProfilePhoto} { width: 50%; }
+
         ${Discription} { width: auto; }
     }
 

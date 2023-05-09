@@ -6,6 +6,7 @@ import { Home } from './Home-page'
 import { AboutMe } from './About-me'
 import { Projects } from './Projects'
 import { ProjectDetails } from './Projects/ProjectDetails'
+import { Skills } from './Skills'
 
 export const AppRoutes = () => (
     <BrowserRouter>
@@ -15,7 +16,7 @@ export const AppRoutes = () => (
                 <Route element={<Home />} exact path='/' />
                 <Route element={<AboutMe />} path='/about-me' />
                 <Route element={<Projects />} path='/projects' />
-                <Route element={<h1>Skills</h1>} path='/skills' />
+                <Route element={<Skills/>} path='/skills' />
                 <Route element={<h1>Contact</h1>} path='/contact' />
 
                 <Route element={<ProjectDetails />} path='/projects/:id' />
@@ -27,7 +28,7 @@ export const AppRoutes = () => (
 const MainContainer = styled.main`
     width: calc(100vw - 150px);
     height: 100vh;
-    padding: 5%;
+    padding: 3%;
     margin: 0 0 0 150px;
 
     display: grid;

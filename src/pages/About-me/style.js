@@ -9,7 +9,7 @@ export const MainContent = styled.div`
 `
 
 export const ProfilePhoto = styled.img`
-    max-width: 50%;
+    width: 35%;
     margin: 25px 0 0 25px;
 
     box-shadow: -25px -25px var(--primary-color);
