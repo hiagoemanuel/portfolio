@@ -35,7 +35,7 @@ export const Skill = styled.div`
     width: 120px;
     height: 115px;
     padding: 20px;
-    border: 5px solid transparent;
+    border: 5px solid ${(props) => props.selected ? 'var(--primary-color)' : 'transparent'};
 
     display: flex;
     justify-content: center;

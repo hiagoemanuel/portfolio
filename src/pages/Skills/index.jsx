@@ -1,10 +1,13 @@
+import { technologies } from '../../constants/technologies'
 import { MainTitle } from '../../styles/global-components'
 import { Container, ContentContainer, IconContainer, Skill, SkillName, SkillIntroduction } from './style'
-import { SkillsIcon } from '../../constants/skills-icon'
 import { OwlIllustration } from '../../constants/vectors'
 import { Responsive } from './responsive'
+import { useState } from 'react'
 
 export const Skills = () => {
+    const [currentTech, setCurrentTech] = useState(technologies[0])
+
     return (
         <Container>
             <Responsive />
@@ -12,14 +15,23 @@ export const Skills = () => {
             <ContentContainer>
                 <IconContainer>
                     {
-                        SkillsIcon.map((icon, index) => (<Skill key={index}>{icon()}</Skill>))
+                        technologies.map((tech, index) => (
+                            <Skill
+                                onClick={() => setCurrentTech(tech)}
+                                selected={currentTech.name === tech.name}
+                                key={index}
+                            >
+                                {tech.icon}
+                            </Skill>
+                        ))
                     }
                 </IconContainer>
                 <div>
-                    <SkillName>HTML5<span>(hyper text markup language)</span></SkillName>
-                    <SkillIntroduction>
-                        HTML é uma linguagem de marcação utilizada na construção de páginas na Web. Documentos HTML podem ser interpretados por navegadores. A tecnologia é fruto da junção entre os padrões HyTime e SGML. HyTime é um padrão para a representação estruturada de hipermídia e conteúdo baseado em tempo.
-                    </SkillIntroduction>
+                    <SkillName>
+                        {currentTech.name}
+                        {currentTech.parentheses ? <span>{currentTech.parentheses}</span> : ''}
+                    </SkillName>
+                    <SkillIntroduction>{currentTech.description}</SkillIntroduction>
                 </div>
                 <OwlIllustration propClass='illustration' />
             </ContentContainer>
