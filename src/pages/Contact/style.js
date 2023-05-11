@@ -3,9 +3,6 @@ import styled from "styled-components";
 export const Container = styled.section`
     width: 100%;
     height: 100%;
-    margin-bottom: 25px;
-
-    position: relative;
 `
 
 export const MainContent = styled.div`
@@ -37,7 +34,7 @@ export const Footer = styled.footer`
     padding: 5px;
 
     position: absolute;
-    bottom: calc(0px - 2%);
+    bottom: 0px;
     left: 0px;
     
     display: flex;

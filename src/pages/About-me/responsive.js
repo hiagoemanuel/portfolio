@@ -12,7 +12,7 @@ export const Responsive = createGlobalStyle`
 
         ${ProfilePhoto} { width: 50%; }
 
-        ${Discription} { width: auto; }
+        ${Discription} { max-width: max-content;}
     }
 
     @media (max-width: 580px) { ${Discription} p { font-size: 1.6rem; } }
@@ -25,6 +25,11 @@ export const Responsive = createGlobalStyle`
             margin: 20px 0 0 20px;
         }
 
-        ${Discription} svg { display: none }
+        ${Discription} svg {
+            width: 60px;
+            height: 100px;
+        }
     }
+
+    @media (max-width: 320px) { ${Discription} svg { display: none; } }
 `

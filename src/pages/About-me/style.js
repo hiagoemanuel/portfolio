@@ -1,5 +1,10 @@
 import styled from "styled-components"
 
+export const Container = styled.section`
+    width: 100%;
+    height: 100%;
+`
+
 export const MainContent = styled.div`
     display: flex;
     justify-content: space-between;
@@ -9,7 +14,7 @@ export const MainContent = styled.div`
 `
 
 export const ProfilePhoto = styled.img`
-    width: 35%;
+    width: 30vw;
     margin: 25px 0 0 25px;
 
     box-shadow: -25px -25px var(--primary-color);
@@ -17,7 +22,7 @@ export const ProfilePhoto = styled.img`
 `
 
 export const Discription = styled.div`
-    width: 590px;
+    max-width: 590px;
 
     p {
         font-size: 2.4rem;
