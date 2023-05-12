@@ -12,9 +12,10 @@ export const theme = {
 }
 
 const ThemeContext = createContext({})
+const storageTheme = localStorage.getItem('portTheme')
 
 const ThemeProvider = ({ children }) => {
-    const [mainTheme, setMainTheme] = useState(theme.lightMode)
+    const [mainTheme, setMainTheme] = useState(storageTheme === 'darkMode' ? theme.darkMode : theme.lightMode)
 
     return (
         <ThemeContext.Provider value={{ mainTheme, setMainTheme }}>
