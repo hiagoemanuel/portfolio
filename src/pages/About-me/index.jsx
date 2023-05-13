@@ -11,9 +11,8 @@ export const AboutMe = () => (
         <MainContent>
             <ProfilePhoto src={profile_photo} alt="profile_photo" />
             <Discription>
-                <p>
-                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-                </p>
+                <p>Desde criança, sempre tive um grande interesse na área de T.I. Sempre fui fascinado pelo poder que os computadores têm em mudar a vida das pessoas, especialmente a minha.</p>
+                <p>Em janeiro de 2022, comecei a estudar programação por pura curiosidade. Gostei tanto dessa complexidade que hoje em dia estou buscando meu espaço na área de desenvolvimento web, mais especificamente como front-end developer.</p>
                 <FoxIllustration />
             </Discription>
         </MainContent>

@@ -17,7 +17,7 @@ export const GridProjects = styled.div`
 
         position: relative;
 
-        img { width: 100%; }
+        img { width: 100%;}
 
         span {
             width: 100%;

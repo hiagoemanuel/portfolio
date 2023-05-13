@@ -1,110 +1,45 @@
+// name: string
+// discription: string
+// links: {
+//     projectPath: string
+//     githubRepository: string
+//     webSiteAccess: string
+// }
+// images: {
+//     grid: require(path: main-photo.jpg)
+//     main: require(path: details-photo.jpg)
+//     
+//     ###
+//      grid = 314x147
+//      main = 400x400
+//     ###
+// }
+
 export const projects = [
     {
-        name: 'Projeto 1',
-        discription: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi atque earum, quam iste quis necessitatibus inventore consequatur quo veritatis error culpa? Enim non harum recusandae similique vero minima magni nostrum?',
+        name: 'Pokémon API',
+        discription: 'Um site SPA que exibe cards de Pokémon. Com 12 temas e um filtro, você pode personalizar sua busca pelos cards desejados. Os dados são obtidos de uma API, exibindo imagens, nomes, tipos, habilidades e movimentos.',
         links: {
             projectPath: 'projeto-1',
-            githubRepository: 'https://github.com/',
+            githubRepository: 'https://github.com/hiagoemanuel/pokemon-api',
             webSiteAccess: 'https://pokemon-api-zeta-ten.vercel.app/'
         },
         images: {
-            grid: require('../images/projects-pictures/project1-illustration-grid-exemple.jpg'),
-            main: require('../images/projects-pictures/project1-illustration-grid-exemple.jpg')
+            grid: require('../images/projects-pictures/pokemon-api/main-photo.jpg'),
+            main: require('../images/projects-pictures/pokemon-api/details-photo.jpg')
         },
     },
     {
-        name: 'Projeto 2',
-        discription: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi atque earum, quam iste quis necessitatibus inventore consequatur quo veritatis error culpa? Enim non harum recusandae similique vero minima magni nostrum?',
+        name: 'Em breve...',
+        discription: '',
         links: {
-            projectPath: 'projeto-2',
-            githubRepository: 'https://github.com/',
-            webSiteAccess: 'https://pokemon-api-zeta-ten.vercel.app/'
+            projectPath: '',
+            githubRepository: '',
+            webSiteAccess: ''
         },
         images: {
-            grid: require('../images/projects-pictures/project2-illustration-grid-exemple.jpg'),
-            main: require('../images/projects-pictures/project2-illustration-grid-exemple.jpg')
+            grid: require('../images/projects-pictures/comming-soon.jpg'),
+            main: ''
         },
-    },
-    {
-        name: 'Projeto 3',
-        discription: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi atque earum, quam iste quis necessitatibus inventore consequatur quo veritatis error culpa? Enim non harum recusandae similique vero minima magni nostrum?',
-        links: {
-            projectPath: 'projeto-3',
-            githubRepository: 'https://github.com/',
-            webSiteAccess: 'https://pokemon-api-zeta-ten.vercel.app/'
-        },
-        images: {
-            grid: require('../images/projects-pictures/project3-illustration-grid-exemple.jpg'),
-            main: require('../images/projects-pictures/project3-illustration-grid-exemple.jpg')
-        },
-    },
-    {
-        name: 'Projeto 4',
-        discription: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi atque earum, quam iste quis necessitatibus inventore consequatur quo veritatis error culpa? Enim non harum recusandae similique vero minima magni nostrum?',
-        links: {
-            projectPath: 'projeto-4',
-            githubRepository: 'https://github.com/',
-            webSiteAccess: 'https://pokemon-api-zeta-ten.vercel.app/'
-        },
-        images: {
-            grid: require('../images/projects-pictures/project4-illustration-grid-exemple.jpg'),
-            main: require('../images/projects-pictures/project4-illustration-grid-exemple.jpg')
-        },
-    },
-    {
-        name: 'Projeto 5',
-        discription: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi atque earum, quam iste quis necessitatibus inventore consequatur quo veritatis error culpa? Enim non harum recusandae similique vero minima magni nostrum?',
-        links: {
-            projectPath: 'projeto-5',
-            githubRepository: 'https://github.com/',
-            webSiteAccess: 'https://pokemon-api-zeta-ten.vercel.app/'
-        },
-        images: {
-            grid: require('../images/projects-pictures/project5-illustration-grid-exemple.jpg'),
-            main: require('../images/projects-pictures/project5-illustration-grid-exemple.jpg')
-        },
-
-    },
-    {
-        name: 'Projeto 6',
-        discription: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi atque earum, quam iste quis necessitatibus inventore consequatur quo veritatis error culpa? Enim non harum recusandae similique vero minima magni nostrum?',
-        links: {
-            projectPath: 'projeto-6',
-            githubRepository: 'https://github.com/',
-            webSiteAccess: 'https://pokemon-api-zeta-ten.vercel.app/'
-        },
-        images: {
-            grid: require('../images/projects-pictures/project6-illustration-grid-exemple.jpg'),
-            main: require('../images/projects-pictures/project6-illustration-grid-exemple.jpg')
-        },
-
-    },
-    {
-        name: 'Projeto 7',
-        discription: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi atque earum, quam iste quis necessitatibus inventore consequatur quo veritatis error culpa? Enim non harum recusandae similique vero minima magni nostrum?',
-        links: {
-            projectPath: 'projeto-7',
-            githubRepository: 'https://github.com/',
-            webSiteAccess: 'https://pokemon-api-zeta-ten.vercel.app/'
-        },
-        images: {
-            grid: require('../images/projects-pictures/project5-illustration-grid-exemple.jpg'),
-            main: require('../images/projects-pictures/project5-illustration-grid-exemple.jpg')
-        },
-
-    },
-    {
-        name: 'Projeto 8',
-        discription: 'Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi atque earum, quam iste quis necessitatibus inventore consequatur quo veritatis error culpa? Enim non harum recusandae similique vero minima magni nostrum?',
-        links: {
-            projectPath: 'projeto-8',
-            githubRepository: 'https://github.com/',
-            webSiteAccess: 'https://pokemon-api-zeta-ten.vercel.app/'
-        },
-        images: {
-            grid: require('../images/projects-pictures/project3-illustration-grid-exemple.jpg'),
-            main: require('../images/projects-pictures/project3-illustration-grid-exemple.jpg')
-        },
-
     }
 ]
