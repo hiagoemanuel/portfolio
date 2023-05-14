@@ -1,18 +1,28 @@
-import { useContext } from "react";
-import { illustration } from "../../constants/carousel-illustrations";
+import { useContext, useEffect, useState } from "react";
 import { CarouselContext } from "../../contexts/current-carousel";
 import { PlayerControl } from "./PlayerControl";
 import { Container, Illustration } from "./style"
+import { ReactSVG } from "react-svg";
 
 export const Carousel = () => {
-    const {currentIllustration} = useContext(CarouselContext)
-    
+    const { currentIllustration } = useContext(CarouselContext)
+    const [illustrations, setIllustrations] = useState()
+
+    useEffect(() => {
+        const data = async () => {
+            const response = await fetch('/data/home-carousel.json')
+            const json = await response.json()
+            setIllustrations(json)
+        }
+        data()
+    }, [])
+
     return (
-        <Container>
+        illustrations ? <Container>
             <Illustration>
-                {illustration[currentIllustration]()}
+                <ReactSVG src={illustrations[currentIllustration]} />
             </Illustration>
-            <PlayerControl />
-        </Container>
+            <PlayerControl carousel={illustrations} />
+        </Container> : ''
     )
 }

@@ -27,6 +27,6 @@ export const Responsive = createGlobalStyle`
 
         ${ContactInformation} h3 { font-size: 2.2rem; }
 
-        ${MainContent} .cat-illustration { width: 260px; }
+        ${MainContent} .cat-illustration div svg { width: 260px; }
     }
 `

@@ -31,7 +31,7 @@ export const Responsive = createGlobalStyle`
                 overflow: hidden;
                 z-index: 1000;
                 
-                .logo-icon { max-width: 12rem; }
+                #logo div svg { max-width: 12rem; }
 
                 ${ThemeButtonStyle}, nav { display: block; }
 
@@ -57,7 +57,7 @@ export const Responsive = createGlobalStyle`
             height: 60px;
             padding: 15px 20px;
 
-            .logo-icon { width: 30px; }
+            #logo div svg { width: 30px; }
 
             ${HamburgerStyle} {
                 width: 30px;
@@ -67,7 +67,7 @@ export const Responsive = createGlobalStyle`
             }
 
             &.menu-active {
-                .logo-icon { width: 10rem; }
+                #logo div svg { width: 10rem; }
 
                 nav { font-size: 48rem; }
 

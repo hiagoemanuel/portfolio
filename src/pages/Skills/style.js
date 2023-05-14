@@ -11,7 +11,7 @@ export const ContentContainer = styled.div`
 
     position: relative;
 
-    .illustration {
+    #olw-illustration div svg {
         position: absolute;
         right: 0;
         bottom: 0;
@@ -43,8 +43,10 @@ export const Skill = styled.div`
 
     cursor: pointer;
 
-    svg {
-        min-width: 100%;
+    div { width: 100%; }
+
+    div svg {
+        width: -webkit-fill-available;
         height: 100%;
     }
 `

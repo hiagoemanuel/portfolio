@@ -1,12 +1,23 @@
-import { technologies } from '../../constants/technologies'
 import { MainTitle } from '../../styles/global-components'
 import { Container, ContentContainer, IconContainer, Skill, SkillName, SkillIntroduction } from './style'
-import { OwlIllustration } from '../../constants/vectors'
 import { Responsive } from './responsive'
 import { useState } from 'react'
+import { ReactSVG } from 'react-svg'
+import { useEffect } from 'react'
 
 export const Skills = () => {
-    const [currentTech, setCurrentTech] = useState(technologies[0])
+    const [technologies, setTechnologies] = useState([])
+    const [currentTech, setCurrentTech] = useState([])
+
+    useEffect(() => {
+        const data = async () => {
+            const response = await fetch('data/skills.json')
+            const json = await response.json()
+            setTechnologies(json)
+            setCurrentTech(json[0])
+        }
+        data()
+    }, [])
 
     return (
         <Container>
@@ -21,7 +32,7 @@ export const Skills = () => {
                                 selected={currentTech.name === tech.name}
                                 key={index}
                             >
-                                {tech.icon}
+                                <ReactSVG src={tech.icon} />
                             </Skill>
                         ))
                     }
@@ -33,7 +44,7 @@ export const Skills = () => {
                     </SkillName>
                     <SkillIntroduction>{currentTech.description}</SkillIntroduction>
                 </div>
-                <OwlIllustration propClass='illustration' />
+                <ReactSVG id='olw-illustration' src='/images/illustrations/owl-illustration.svg'/>
             </ContentContainer>
         </Container>
     )

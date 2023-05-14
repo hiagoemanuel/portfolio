@@ -1,10 +1,8 @@
 import { useContext, useEffect } from "react"
 import { ProgressBarStyle } from './style'
 import { CarouselContext } from "../../../../contexts/current-carousel"
-import { illustration } from "../../../../constants/carousel-illustrations"
 
-
-export const ProgressBar = ({ pauseStatus, bar }) => {
+export const ProgressBar = ({ pauseStatus, bar, carousel }) => {
     const { currentIllustration, setCurrentIllustration, progressBar, setProgressBar } = useContext(CarouselContext)
     const carouselTimer = 10 // seconds
 
@@ -18,7 +16,7 @@ export const ProgressBar = ({ pauseStatus, bar }) => {
 
                 if (progressBar >= barWidth) {
                     setCurrentIllustration(prevCurrentIllustration => {
-                        if (prevCurrentIllustration >= illustration.length - 1) {
+                        if (prevCurrentIllustration >= carousel.length - 1) {
                             return 0
                         } else {
                             return prevCurrentIllustration + 1
@@ -31,7 +29,7 @@ export const ProgressBar = ({ pauseStatus, bar }) => {
         }
 
         return () => clearInterval(timer)
-    }, [pauseStatus, bar, progressBar, setProgressBar, currentIllustration, setCurrentIllustration])
+    }, [pauseStatus, bar, carousel, progressBar, setProgressBar, currentIllustration, setCurrentIllustration])
 
     return <ProgressBarStyle percentageProgress={progressBar} />
 }

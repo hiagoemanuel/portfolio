@@ -10,7 +10,7 @@ export const MainContent = styled.div`
     align-items: center;
     gap: 100px;
 
-    .cat-illustration { max-width: 100%; }
+    #cat-illustration div svg { max-width: 100%; }
 `
 
 export const PersonalContact= styled.div`

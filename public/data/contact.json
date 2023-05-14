@@ -1,0 +1,17 @@
+[
+    {
+        "icon": "/images/icons/contact-icons/github-contact-icon.svg",
+        "extension": "/hiagoemanuel",
+        "referenceLink": "https://github.com/hiagoemanuel"
+    },
+    {
+        "icon": "/images/icons/contact-icons/linkedin-icon.svg",
+        "extension": "/hiagoemanuel",
+        "referenceLink": "https://www.linkedin.com/in/hiago-emanuel-603610246/"
+    },
+    {
+        "icon": "/images/icons/contact-icons/whatsapp-icon.svg",
+        "extension": "+55 (45) 98810-9220",
+        "referenceLink": "https://api.whatsapp.com/send?phone=5545988109220"
+    }
+]

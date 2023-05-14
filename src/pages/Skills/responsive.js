@@ -3,13 +3,13 @@ import { ContentContainer, IconContainer, Skill, SkillIntroduction, SkillName } 
 
 export const Responsive = createGlobalStyle`
     @media (max-width: 1250px) {
-        .illustration {
+        #olw-illustration div svg {
             width: 150px;
             height: fit-content;
         }
     }
 
-    @media (max-width: 750px) {
+    @media (max-width: 830px) {
         ${ContentContainer} {
             flex-direction: column;
             align-items: center;
@@ -36,7 +36,7 @@ export const Responsive = createGlobalStyle`
             }
         }
         
-        .illustration { display: none; }
+        #olw-illustration div svg { display: none; }
     }
 
     @media (max-width: 540px) {
@@ -44,7 +44,7 @@ export const Responsive = createGlobalStyle`
             height: 85px;
         }
 
-        ${Skill} {
+        ${Skill}{
             width: 65px;
             height: 60px;
             padding: 10px;

@@ -1,24 +1,37 @@
 import { MainTitle } from "../../styles/global-components"
 import { Container, MainContent, PersonalContact, ContactInformation, Footer } from "./style"
-import { CatIllustration } from '../../constants/vectors'
-import { contactData } from "../../constants/contact"
 import { Responsive } from "./responsive"
+import { useEffect, useState } from "react"
+import { ReactSVG } from "react-svg"
 
 export const Contact = () => {
+    const [contactData, setContactData] = useState([])
+
+    useEffect(() => {
+        const data = async () => {
+            const response = await fetch('/data/contact.json')
+            const json = await response.json()
+            setContactData(json)
+        }
+        data()
+    }, [])
+
     return (
         <Container>
             <Responsive />
             <MainTitle>Contato</MainTitle>
             <MainContent>
-                <CatIllustration propClass='cat-illustration' />
+                <ReactSVG id="cat-illustration" src='images/illustrations/cat-illustration.svg' />
                 <PersonalContact>
                     {
-                        contactData.map((info, index) => (
-                            <ContactInformation href={info.referenceLink} target="_blank" key={index}>
-                                {info.icon}
-                                <h3>{info.extension}</h3>
-                            </ContactInformation>
-                        ))
+                        contactData.map((info, index) => {
+                            return (
+                                <ContactInformation href={info.referenceLink} target="_blank" key={index}>
+                                    <ReactSVG src={info.icon} />
+                                    <h3>{info.extension}</h3>
+                                </ContactInformation>
+                            )
+                        })
                     }
                 </PersonalContact>
             </MainContent>
