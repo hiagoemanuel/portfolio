@@ -1,9 +1,10 @@
-import { MainTitle } from "../../styles/global-components"
-import { Container, MainContent, Discription, ProfilePhoto } from "./style"
-import { Responsive } from "./responsive"
+import { useEffect, useState } from "react"
 import { ReactSVG } from "react-svg"
-import { useEffect } from "react"
-import { useState } from "react"
+
+import { Container, MainTitle } from "../../styles/global-components"
+
+import { Discription, MainContent, ProfilePhoto } from "./style"
+import { Responsive } from "./responsive"
 
 export const AboutMe = () => {
     const [aboutMeData, setAboutMeData] = useState({})

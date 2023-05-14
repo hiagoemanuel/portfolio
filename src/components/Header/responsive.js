@@ -1,8 +1,8 @@
-import { createGlobalStyle } from 'styled-components'
-
-import { HeaderStyle } from './style'
-import { HamburgerStyle } from './MenuHamburger/style'
 import { ThemeButtonStyle } from './MainThemes/style'
+import { HamburgerStyle } from './MenuHamburger/style'
+
+import { createGlobalStyle } from 'styled-components'
+import { HeaderStyle } from './style'
 
 export const Responsive = createGlobalStyle`
     @media (max-width: 1000px) {

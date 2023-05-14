@@ -1,9 +1,9 @@
+import { Content, Informations, LinkButton, Links, ProjectDemo, ProjectAbout } from "./style";
 import { createGlobalStyle } from "styled-components";
-import { Container, Informations, LinkButton, Links, ProjectAbout, ProjectDemo } from "./style";
 
 export const Responsive = createGlobalStyle`
     @media (max-width: 1000px) {
-        ${Container} {
+        ${Content} {
             flex-direction: column;
             align-items: center;
             gap: 30px;

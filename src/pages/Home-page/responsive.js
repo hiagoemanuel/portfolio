@@ -1,6 +1,7 @@
+import { Illustration } from "../../components/Carousel/style";
+
 import { createGlobalStyle } from "styled-components";
 import { Content, Occupation, Presentation, Salutation } from "./style";
-import { Illustration } from "../../components/Carousel/style";
 
 export const Responsive = createGlobalStyle`
     @media (max-width: 1000px) {
@@ -26,7 +27,7 @@ export const Responsive = createGlobalStyle`
         ${Salutation} { font-size: 4rem; }
         ${Occupation} { font-size: 2rem; }
 
-        ${Illustration} {
+        ${Illustration} div div {
             width: 200px;
             height: 210px;
         }        

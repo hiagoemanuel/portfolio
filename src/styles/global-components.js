@@ -16,3 +16,8 @@ export const MainTitle = styled.h1`
 
     @media(max-width: 580px) { font-size: 3.6rem; }
 `
+
+export const Container = styled.section`
+    width: 100%;
+    height: 100%;
+`

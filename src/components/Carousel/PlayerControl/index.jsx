@@ -1,8 +1,10 @@
 import { useContext, useRef, useState } from "react"
-import { Container, Bar, Controls } from "./style"
+import { ReactSVG } from "react-svg"
+
 import { CarouselContext } from "../../../contexts/current-carousel"
 import { ProgressBar } from "./ProgressBar"
-import { ReactSVG } from "react-svg"
+
+import { Container, Bar, Controls } from "./style"
 
 export const PlayerControl = ({ carousel }) => {
     const { setCurrentIllustration, setProgressBar } = useContext(CarouselContext)

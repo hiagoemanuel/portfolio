@@ -1,7 +1,9 @@
 import { useContext, useState } from 'react'
-import { ThemeContext, theme } from '../../../contexts/themes'
-import { ThemeButtonStyle } from './style'
 import { ReactSVG } from 'react-svg'
+
+import { ThemeContext, theme } from '../../../contexts/themes'
+
+import { ThemeButtonStyle } from './style'
 
 const storageTheme = localStorage.getItem('portTheme')
 

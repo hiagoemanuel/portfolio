@@ -1,6 +1,7 @@
 import { Carousel } from "../../components/Carousel";
 import { CarouselProvider } from "../../contexts/current-carousel";
-import { Content, Presentation, Occupation, Salutation } from "./style"
+
+import { Content, Occupation, Presentation, Salutation } from "./style"
 import { Responsive } from "./responsive";
 
 export const Home = () => (

@@ -1,9 +1,10 @@
-import { MainTitle } from '../../styles/global-components'
+import { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
+
+import { Container, MainTitle } from '../../styles/global-components'
+
 import { GridProjects } from './style'
 import { Responsive } from './responsive'
-import { useEffect } from 'react'
-import { useState } from 'react'
 
 export const Projects = () => {
     const [projectsData, setProjectsData] = useState([])
@@ -18,7 +19,7 @@ export const Projects = () => {
     }, [])
 
     return (
-        <>
+        <Container>
             <Responsive />
             <MainTitle>Projetos</MainTitle>
             <GridProjects>
@@ -33,6 +34,6 @@ export const Projects = () => {
                     ))
                 }
             </GridProjects>
-        </>
+        </Container>
     )
 }

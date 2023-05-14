@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const GridProjects = styled.div`
     width: 100%;
+    height: 65vh;
     padding: 10px;
 
     overflow-y: scroll;

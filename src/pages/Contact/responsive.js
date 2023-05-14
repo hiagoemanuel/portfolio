@@ -1,5 +1,7 @@
+import { Container } from "../../styles/global-components";
+
+import { ContactInformation, Footer, MainContent, PersonalContact } from "./style";
 import { createGlobalStyle } from "styled-components";
-import { ContactInformation, Container, Footer, MainContent, PersonalContact } from "./style";
 
 export const Responsive = createGlobalStyle`
     @media (max-width: 1000px) {

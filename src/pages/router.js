@@ -1,13 +1,14 @@
-import styled from 'styled-components'
-import { BrowserRouter, Routes, Route } from 'react-router-dom'
-import { Header } from '../components/Header'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
 
-import { Home } from './Home-page'
 import { AboutMe } from './About-me'
-import { Projects } from './Projects'
-import { ProjectDetails } from './Projects/ProjectDetails'
-import { Skills } from './Skills'
 import { Contact } from './Contact'
+import { Header } from '../components/Header'
+import { Home } from './Home-page'
+import { ProjectDetails } from './Projects/ProjectDetails'
+import { Projects } from './Projects'
+import { Skills } from './Skills'
+
+import styled from 'styled-components'
 
 export const AppRoutes = () => (
     <BrowserRouter>

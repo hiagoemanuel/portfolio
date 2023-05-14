@@ -1,9 +1,10 @@
-import { MainTitle } from '../../styles/global-components'
-import { Container, ContentContainer, IconContainer, Skill, SkillName, SkillIntroduction } from './style'
-import { Responsive } from './responsive'
-import { useState } from 'react'
 import { ReactSVG } from 'react-svg'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
+
+import { Container, MainTitle } from '../../styles/global-components'
+
+import { ContentContainer, IconContainer, Skill, SkillIntroduction, SkillName } from './style'
+import { Responsive } from './responsive'
 
 export const Skills = () => {
     const [technologies, setTechnologies] = useState([])

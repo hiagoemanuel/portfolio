@@ -1,8 +1,10 @@
-import { useContext, useEffect, useState } from "react";
+import { useEffect, useContext, useState } from "react";
+import { ReactSVG } from "react-svg";
+
 import { CarouselContext } from "../../contexts/current-carousel";
 import { PlayerControl } from "./PlayerControl";
+
 import { Container, Illustration } from "./style"
-import { ReactSVG } from "react-svg";
 
 export const Carousel = () => {
     const { currentIllustration } = useContext(CarouselContext)

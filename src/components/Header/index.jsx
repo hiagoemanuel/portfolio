@@ -1,9 +1,11 @@
+import { ReactSVG } from 'react-svg'
+
 import { MainThemes } from './MainThemes'
-import { HeaderStyle } from './style.js'
 import { MenuHamburger } from './MenuHamburger'
 import { NavigationHeader } from './NavigationHeader'
+
+import { HeaderStyle } from './style.js'
 import { Responsive } from './responsive'
-import { ReactSVG } from 'react-svg'
 
 export const Header = () => {
     return (

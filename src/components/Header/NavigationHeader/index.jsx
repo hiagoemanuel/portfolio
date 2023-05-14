@@ -1,7 +1,7 @@
-import { useRef } from "react"
+import { useEffect, useRef } from "react"
 import { Link } from "react-router-dom"
+
 import { List } from "./style"
-import { useEffect } from "react"
 
 export const NavigationHeader = () => {
     const navList = useRef()

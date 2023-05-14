@@ -1,8 +1,10 @@
-import { MainTitle } from "../../styles/global-components"
-import { Container, MainContent, PersonalContact, ContactInformation, Footer } from "./style"
-import { Responsive } from "./responsive"
 import { useEffect, useState } from "react"
 import { ReactSVG } from "react-svg"
+
+import { Container, MainTitle } from "../../styles/global-components"
+
+import { ContactInformation, Footer, MainContent, PersonalContact } from "./style"
+import { Responsive } from "./responsive"
 
 export const Contact = () => {
     const [contactData, setContactData] = useState([])

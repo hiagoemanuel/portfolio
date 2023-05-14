@@ -8,10 +8,12 @@ export const Container = styled.div`
 `
 
 export const Illustration = styled.div`
-    width: 400px;
-    height: 450px;
+    div div {
+        width: 400px;
+        height: 450px;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 `
