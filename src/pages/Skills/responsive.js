@@ -3,7 +3,7 @@ import { ContentContainer, IconContainer, Skill, SkillIntroduction, SkillName } 
 
 export const Responsive = createGlobalStyle`
     @media (max-width: 1250px) {
-        #olw-illustration div svg {
+        .owl-illu {
             width: 150px;
             height: fit-content;
         }
@@ -36,7 +36,7 @@ export const Responsive = createGlobalStyle`
             }
         }
         
-        #olw-illustration div svg { display: none; }
+        .owl-illu { display: none; }
     }
 
     @media (max-width: 540px) {

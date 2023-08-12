@@ -1,33 +1,23 @@
-import { useEffect, useState } from "react"
-import { ReactSVG } from "react-svg"
+import { aboutMe } from "../../constants/about-me"
 
 import { Container, MainTitle } from "../../styles/global-components"
+import ProfileIMG from '../../assets/profile-photo.jpg'
+import { ReactComponent as FoxILLU } from '../../assets/illustrations/fox-illustration.svg'
 
 import { Discription, MainContent, ProfilePhoto } from "./style"
 import { Responsive } from "./responsive"
 
 export const AboutMe = () => {
-    const [aboutMeData, setAboutMeData] = useState({})
-
-    useEffect(() => {
-        const data = async () => {
-            const response = await fetch('data/about-me.json')
-            const json = await response.json()
-            setAboutMeData(json)
-        }
-        data()
-    }, [])
-
     return (
         <Container>
             <Responsive />
             <MainTitle>Sobre Mim</MainTitle>
             <MainContent>
-                <ProfilePhoto src={aboutMeData.profilePhoto} alt="profile_photo" />
+                <ProfilePhoto src={ProfileIMG} alt="profile_photo" />
                 <Discription>
-                    <p>{aboutMeData.paragraphOne}</p>
-                    <p>{aboutMeData.paragraphTwo}</p>
-                    <ReactSVG src='/images/illustrations/fox-illustration.svg' />
+                    <p>{aboutMe.paragraphOne}</p>
+                    <p>{aboutMe.paragraphTwo}</p>
+                    <FoxILLU />
                 </Discription>
             </MainContent>
         </Container>

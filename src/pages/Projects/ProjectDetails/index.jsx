@@ -1,8 +1,11 @@
-import { ReactSVG } from "react-svg";
 import { Link, useParams } from "react-router-dom";
 import { useEffect, useState } from "react";
 
+import { projects } from "../../../constants/projects/projects";
+
 import { Container, MainTitle } from "../../../styles/global-components";
+import { ReactComponent as ChanICON } from '../../../assets/icons/link-icon/chain-icon.svg';
+import { ReactComponent as GitHubICON } from '../../../assets/icons/link-icon/github-icon.svg';
 
 import { Content, Informations, LinkButton, Links, ProjectAbout, ProjectDemo } from "./style";
 import { Responsive } from "./responsive";
@@ -12,12 +15,8 @@ export const ProjectDetails = () => {
     const [projectData, setProjectData] = useState()
 
     useEffect(() => {
-        const data = async () => {
-            const response = await fetch('/data/projects.json')
-            const json = await response.json()
-            setProjectData(json.filter(p => p.links.projectPath === routeUrl)[0])
-        }
-        data()
+        const projectResponse = projects.filter(p => p.links.projectPath === routeUrl)[0]
+        setProjectData(projectResponse)
     }, [routeUrl])
 
     return (
@@ -35,11 +34,11 @@ export const ProjectDetails = () => {
                         </Informations>
                         <Links>
                             <LinkButton href={projectData.links.webSiteAccess} target="_blanck">
-                                <ReactSVG src='/images/icons/link-icon/chain-icon.svg' />
+                                <ChanICON />
                                 Acessar Site
                             </LinkButton>
                             <LinkButton href={projectData.links.githubRepository} target="_blanck">
-                                <ReactSVG src='/images/icons/link-icon/github-icon.svg' />
+                                <GitHubICON />
                                 Repositório
                             </LinkButton>
                         </Links>

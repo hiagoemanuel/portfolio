@@ -1,32 +1,23 @@
-import { useEffect, useState } from "react"
 import { ReactSVG } from "react-svg"
 
+import { contact } from "../../constants/contact/contact"
+
+import { ReactComponent as CatSVG } from '../../assets/illustrations/cat-illustration.svg'
 import { Container, MainTitle } from "../../styles/global-components"
 
 import { ContactInformation, Footer, MainContent, PersonalContact } from "./style"
 import { Responsive } from "./responsive"
 
 export const Contact = () => {
-    const [contactData, setContactData] = useState([])
-
-    useEffect(() => {
-        const data = async () => {
-            const response = await fetch('/data/contact.json')
-            const json = await response.json()
-            setContactData(json)
-        }
-        data()
-    }, [])
-
     return (
         <Container>
             <Responsive />
             <MainTitle>Contato</MainTitle>
             <MainContent>
-                <ReactSVG id="cat-illustration" src='images/illustrations/cat-illustration.svg' />
+                <CatSVG className="cat-illu" />
                 <PersonalContact>
                     {
-                        contactData.map((info, index) => {
+                        contact.map((info, index) => {
                             return (
                                 <ContactInformation href={info.referenceLink} target="_blank" key={index}>
                                     <ReactSVG src={info.icon} />

@@ -1,7 +1,9 @@
 import { useContext, useState } from 'react'
-import { ReactSVG } from 'react-svg'
 
 import { ThemeContext, theme } from '../../../contexts/themes'
+
+import { ReactComponent as DarkSVG } from '../../../assets/icons/theme-icons/dark-mode.svg'
+import { ReactComponent as LightSVG } from '../../../assets/icons/theme-icons/light-mode.svg'
 
 import { ThemeButtonStyle } from './style'
 
@@ -25,7 +27,7 @@ export const MainThemes = () => {
 
     return (
         <ThemeButtonStyle onClick={handleLightDark} >
-            {isDark ? <ReactSVG src='images/icons/theme-icons/light-mode.svg' /> : <ReactSVG src='images/icons/theme-icons/dark-mode.svg' />}
+            {isDark ? <LightSVG /> : <DarkSVG />}
         </ThemeButtonStyle>
     )
 }

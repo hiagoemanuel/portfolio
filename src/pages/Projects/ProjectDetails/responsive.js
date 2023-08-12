@@ -11,10 +11,7 @@ export const Responsive = createGlobalStyle`
             .return-btn { display: flex; }
         }
 
-        ${ProjectDemo} {
-            width: 300px;
-            height: 300px;
-        }
+        ${ProjectDemo} { width: 300px; }
 
         ${ProjectAbout} {
             height: auto;

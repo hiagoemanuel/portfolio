@@ -1,24 +1,16 @@
 import { ReactSVG } from 'react-svg'
-import { useEffect, useState } from 'react'
+import { useState } from 'react'
+
+import { skills } from '../../constants/skills/skills'
 
 import { Container, MainTitle } from '../../styles/global-components'
+import { ReactComponent as OwlILLU } from '../../assets/illustrations/owl-illustration.svg'
 
 import { ContentContainer, IconContainer, Skill, SkillIntroduction, SkillName } from './style'
 import { Responsive } from './responsive'
 
 export const Skills = () => {
-    const [technologies, setTechnologies] = useState([])
-    const [currentTech, setCurrentTech] = useState([])
-
-    useEffect(() => {
-        const data = async () => {
-            const response = await fetch('data/skills.json')
-            const json = await response.json()
-            setTechnologies(json)
-            setCurrentTech(json[0])
-        }
-        data()
-    }, [])
+    const [currentTech, setCurrentTech] = useState(skills[0])
 
     return (
         <Container>
@@ -27,7 +19,7 @@ export const Skills = () => {
             <ContentContainer>
                 <IconContainer>
                     {
-                        technologies.map((tech, index) => (
+                        skills.map((tech, index) => (
                             <Skill
                                 onClick={() => setCurrentTech(tech)}
                                 selected={currentTech.name === tech.name}
@@ -45,7 +37,7 @@ export const Skills = () => {
                     </SkillName>
                     <SkillIntroduction>{currentTech.description}</SkillIntroduction>
                 </div>
-                <ReactSVG id='olw-illustration' src='/images/illustrations/owl-illustration.svg'/>
+                <OwlILLU className='owl-illu' />
             </ContentContainer>
         </Container>
     )

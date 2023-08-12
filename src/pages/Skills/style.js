@@ -6,7 +6,7 @@ export const ContentContainer = styled.div`
 
     position: relative;
 
-    #olw-illustration div svg {
+    .owl-illu {
         position: absolute;
         right: 0;
         bottom: 0;

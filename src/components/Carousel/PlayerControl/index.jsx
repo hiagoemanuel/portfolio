@@ -1,7 +1,11 @@
 import { useContext, useRef, useState } from "react"
-import { ReactSVG } from "react-svg"
 
 import { CarouselContext } from "../../../contexts/current-carousel"
+
+import { ReactComponent as NEXTSVG } from '../../../assets/icons/player-control/next-button.svg'
+import { ReactComponent as PAUSESVG } from '../../../assets/icons/player-control/pause-button.svg'
+import { ReactComponent as PLAYSVG } from '../../../assets/icons/player-control/play-button.svg'
+import { ReactComponent as PrevSVG } from '../../../assets/icons/player-control/previous-button.svg'
 import { ProgressBar } from "./ProgressBar"
 
 import { Container, Bar, Controls } from "./style"
@@ -41,9 +45,9 @@ export const PlayerControl = ({ carousel }) => {
                 <ProgressBar pauseStatus={isPaused} bar={barDOM} carousel={carousel} />
             </Bar>
             <Controls>
-                <button onClick={previousIllustration}><ReactSVG src="images/icons/player-control/previous-button.svg" /></button>
-                <button onClick={handlePausePlay}>{isPaused ? <ReactSVG src="images/icons/player-control/play-button.svg" /> : <ReactSVG src="images/icons/player-control/pause-button.svg" />}</button>
-                <button onClick={nextIllustration}><ReactSVG src="images/icons/player-control/next-button.svg" /></button>
+                <button onClick={previousIllustration}><PrevSVG /></button>
+                <button onClick={handlePausePlay}>{isPaused ? <PLAYSVG /> : <PAUSESVG />}</button>
+                <button onClick={nextIllustration}><NEXTSVG /></button>
             </Controls>
         </Container>
     )

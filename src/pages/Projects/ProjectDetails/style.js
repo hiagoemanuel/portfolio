@@ -14,8 +14,8 @@ export const Content = styled.div`
         align-items: center;
 
         position: absolute;
-        top: 5%;
-        left: 5%;
+        top: 10px;
+        left: 10px;
 
         background-color: var(--primary-color);
         color: var(--secondary-color);
@@ -26,7 +26,7 @@ export const Content = styled.div`
 
 export const ProjectDemo = styled.img`
     max-width: 400px;
-    height: 400px;
+    /* max-height: 400px; */
 
     border: 3px solid var(--primary-color);
 `
