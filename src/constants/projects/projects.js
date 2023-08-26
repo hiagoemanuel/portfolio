@@ -28,6 +28,19 @@ export const projects = [
         }
     },
     {
+        name: 'Figma Land',
+        discription: 'Uma landing page com o tema escuro, otima para mostrar produtos de startups.',
+        links: {
+            projectPath: 'figma-land',
+            githubRepository: 'https://github.com/hiagoemanuel/figma-land',
+            webSiteAccess: 'https://figma-landing.vercel.app/'
+        },
+        images: {
+            grid: projectsImages.figmaLand[0],
+            main: projectsImages.figmaLand[1]
+        }
+    },
+    {
         name: 'Em breve...',
         discription: '',
         links: {

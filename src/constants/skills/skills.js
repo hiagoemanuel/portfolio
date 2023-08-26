@@ -22,6 +22,12 @@ export const skills = [
         description: 'JavaScript é uma linguagem de programação que permite implementar elementos complexos em páginas da web. Foi criada em 1995 por Brendan Eich, enquanto trabalhava na Netscape. Seu objetivo era atender à demanda crescente por sites mais interativos e dinâmicos, já que, até então, as páginas HTML tinham pouca ou nenhuma interatividade além dos hiperlinks.'
     },
     {
+        name: 'SASS',
+        parentheses: '(syntactically awesome style sheets)',
+        icon: skillsImages.sass,
+        description: 'É uma linguagem que estende o CSS, desenvolvida por Hampton Catlin e Natalie Weizenbaum. Sua primeira versão foi lançada em 2006 e foi criada para abordar lacunas que o CSS puro ainda não possuía.'
+    },
+    {
         name: 'Bootstrap',
         icon: skillsImages.bootstrap,
         description: 'Bootstrap é um framework front-end que fornece estruturas de CSS para a criação rápida e simples de sites e aplicações. Foi desenvolvido por Mark Otto e Jacob Thornton em 2011 para o Twitter. Seu objetivo era otimizar o desenvolvimento por meio de uma estrutura única, reduzindo inconsistências entre as diversas formas de codificação utilizadas por diferentes profissionais.'

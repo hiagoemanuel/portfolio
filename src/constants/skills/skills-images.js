@@ -7,6 +7,7 @@ import javascript from '../../assets/icons/skills-icons/js-icon.svg'
 import react from '../../assets/icons/skills-icons/react-icon.svg'
 import styledComponents from '../../assets/icons/skills-icons/styled-components-icon.svg'
 import typescript from '../../assets/icons/skills-icons/ts-icon.svg'
+import sass from '../../assets/icons/skills-icons/sass-icon.svg'
 
 export const skillsImages = {
     bootstrap,
@@ -17,5 +18,6 @@ export const skillsImages = {
     javascript,
     react,
     styledComponents,
-    typescript
+    typescript,
+    sass
 }
