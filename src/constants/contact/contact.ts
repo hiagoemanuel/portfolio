@@ -1,6 +1,12 @@
 import { contacImages } from "./contact-images"
 
-export const contact = [
+type ContactType = {
+    icon: string;
+    extension: string;
+    referenceLink: string
+}
+
+export const contact: ContactType[] = [
     {
         icon: contacImages.github,
         extension: '/hiagoemanuel',

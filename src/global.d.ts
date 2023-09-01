@@ -1,5 +1,3 @@
-// <reference types="vite/client" />
-
 declare module '*.svg' {
     import * as React from 'react';
 
@@ -9,4 +7,9 @@ declare module '*.svg' {
 
     const src: string;
     export default src;
+}
+
+declare module '*.jpg' {
+    const value: jpg;
+    export default value;
 }

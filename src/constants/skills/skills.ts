@@ -1,6 +1,13 @@
 import { skillsImages } from "./skills-images"
 
-export const skills = [
+interface Skill {
+    name: string;
+    parentheses?: string;
+    icon: string;
+    description: string
+}
+
+export const skills: Skill[] = [
     {
         name: 'React',
         icon: skillsImages.react,

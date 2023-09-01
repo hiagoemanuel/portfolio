@@ -1,6 +1,20 @@
 import projectsImages from "./projects-images"
 
-export const projects = [
+interface Project {
+    name: string;
+    discription: string;
+    links: {
+        projectPath: string;
+        githubRepository: string;
+        webSiteAccess: string
+    },
+    images: {
+        grid: string,
+        main: string
+    }
+}
+
+export const projects: Project[] = [
     {
         name: 'Pokémon API',
         discription: 'Um site SPA que exibe cards de Pokémon. Com 12 temas e um filtro, você pode personalizar sua busca pelos cards desejados. Os dados são obtidos de uma API, exibindo imagens, nomes, tipos, habilidades e movimentos.',
