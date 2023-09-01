@@ -6,15 +6,15 @@ import { skills } from '../../constants/skills/skills'
 import { Container, MainTitle } from '../../styles/global-components'
 import { ReactComponent as OwlILLU } from '../../assets/illustrations/owl-illustration.svg'
 
-import { ContentContainer, IconContainer, Skill, SkillIntroduction, SkillName } from './style'
 import { Responsive } from './responsive'
+import { ContentContainer, IconContainer, Skill, SkillIntroduction, SkillName } from './style'
 
 export const Skills = () => {
     const [currentTech, setCurrentTech] = useState(skills[0])
 
     return (
         <Container>
-            <Responsive />
+            <Responsive $selected />
             <MainTitle>Habilidades</MainTitle>
             <ContentContainer>
                 <IconContainer>

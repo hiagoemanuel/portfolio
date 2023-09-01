@@ -1,6 +1,6 @@
 import projectsImages from "./projects-images"
 
-interface Project {
+export interface ProjectType {
     name: string;
     discription: string;
     links: {
@@ -14,7 +14,7 @@ interface Project {
     }
 }
 
-export const projects: Project[] = [
+export const projects: ProjectType[] = [
     {
         name: 'Pokémon API',
         discription: 'Um site SPA que exibe cards de Pokémon. Com 12 temas e um filtro, você pode personalizar sua busca pelos cards desejados. Os dados são obtidos de uma API, exibindo imagens, nomes, tipos, habilidades e movimentos.',

@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
 import { AboutMe } from './About-me'
 import { Contact } from './Contact'
@@ -12,11 +12,11 @@ import styled from 'styled-components'
 
 export const AppRoutes = () => {
     return (
-        <BrowserRouter>
+        <Router>
             <Header />
             <MainContainer>
                 <Routes>
-                    <Route element={<Home />} exact path='/' />
+                    <Route element={<Home />} path='/' />
                     <Route element={<AboutMe />} path='/about-me' />
                     <Route element={<Projects />} path='/projects' />
                     <Route element={<Skills />} path='/skills' />
@@ -25,7 +25,7 @@ export const AppRoutes = () => {
                     <Route element={<ProjectDetails />} path='/projects/:id' />
                 </Routes>
             </MainContainer>
-        </BrowserRouter>
+        </Router>
     )
 }
 
