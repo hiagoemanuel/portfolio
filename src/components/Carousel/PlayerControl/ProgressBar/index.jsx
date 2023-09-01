@@ -31,5 +31,5 @@ export const ProgressBar = ({ pauseStatus, bar, carousel }) => {
         return () => clearInterval(timer)
     }, [pauseStatus, bar, carousel, progressBar, setProgressBar, currentIllustration, setCurrentIllustration])
 
-    return <ProgressBarStyle percentageProgress={progressBar} />
+    return <ProgressBarStyle $percentageProgress={progressBar} />
 }

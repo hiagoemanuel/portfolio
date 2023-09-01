@@ -10,22 +10,24 @@ import { Skills } from './Skills'
 
 import styled from 'styled-components'
 
-export const AppRoutes = () => (
-    <BrowserRouter>
-        <Header />
-        <MainContainer>
-            <Routes>
-                <Route element={<Home />} exact path='/' />
-                <Route element={<AboutMe />} path='/about-me' />
-                <Route element={<Projects />} path='/projects' />
-                <Route element={<Skills/>} path='/skills' />
-                <Route element={<Contact />} path='/contact' />
+export const AppRoutes = () => {
+    return (
+        <BrowserRouter>
+            <Header />
+            <MainContainer>
+                <Routes>
+                    <Route element={<Home />} exact path='/' />
+                    <Route element={<AboutMe />} path='/about-me' />
+                    <Route element={<Projects />} path='/projects' />
+                    <Route element={<Skills />} path='/skills' />
+                    <Route element={<Contact />} path='/contact' />
 
-                <Route element={<ProjectDetails />} path='/projects/:id' />
-            </Routes>
-        </MainContainer>
-    </BrowserRouter>
-)
+                    <Route element={<ProjectDetails />} path='/projects/:id' />
+                </Routes>
+            </MainContainer>
+        </BrowserRouter>
+    )
+}
 
 const MainContainer = styled.main`
     width: calc(100vw - 150px);

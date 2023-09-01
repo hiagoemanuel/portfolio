@@ -1,7 +1,7 @@
 import styled from "styled-components"
 
-export const ProgressBarStyle = styled.div`
-    width: ${props => props.percentageProgress}px;
+export const ProgressBarStyle = styled.div<{ $percentageProgress: number }>`
+    width: ${props => props.$percentageProgress}px;
     height: 100%;
 
     position: relative;

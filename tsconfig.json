@@ -5,7 +5,6 @@
         "lib": [
             "dom",
             "dom.iterable",
-            "esnext"
         ],
         "allowJs": true,
         "jsx": "react-jsx",
@@ -28,7 +27,8 @@
         "src/**/*.ts",
         "src/**/*.tsx",
         "src/*.tsx",
-        "src/App.js"
+        "src/App.tsx",
+        "src/pages/router.ts", "src/constants/home-carousel.js", "src/pages/Contact/index.jsx",
     ],
     "exclude": [
         "node_modules"
