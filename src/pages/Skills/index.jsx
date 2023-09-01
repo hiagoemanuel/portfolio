@@ -22,7 +22,7 @@ export const Skills = () => {
                         skills.map((tech, index) => (
                             <Skill
                                 onClick={() => setCurrentTech(tech)}
-                                selected={currentTech.name === tech.name}
+                                $selected={currentTech.name === tech.name}
                                 key={index}
                             >
                                 <ReactSVG src={tech.icon} />

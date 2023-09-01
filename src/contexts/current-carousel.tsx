@@ -19,7 +19,7 @@ type PropsProvider = { children: ReactNode }
 export const CarouselContext = createContext<PropsCarouselContext>(initialValue)
 
 export const CarouselProvider = ({ children }: PropsProvider) => {
-    const [currentIllustration, setCurrentIllustration] = useState(0)
+    const [currentIllustration, setCurrentIllustration] = useState<number>(0)
     const [progressBar, setProgressBar] = useState(0)
 
     return (

@@ -24,11 +24,7 @@
         }
     },
     "include": [
-        "src/**/*.ts",
-        "src/**/*.tsx",
-        "src/*.tsx",
-        "src/App.tsx",
-        "src/pages/router.ts", "src/constants/home-carousel.js", "src/pages/Contact/index.jsx",
+        "src"
     ],
     "exclude": [
         "node_modules"

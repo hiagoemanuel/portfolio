@@ -26,11 +26,11 @@ export const IconContainer = styled.div`
     gap: 50px;
 `
 
-export const Skill = styled.div`
+export const Skill = styled.div<{ $selected: boolean }>`
     width: 120px;
     height: 115px;
     padding: 20px;
-    border: 5px solid ${(props) => props.selected ? 'var(--primary-color)' : 'transparent'};
+    border: 5px solid ${(props) => props.$selected ? 'var(--primary-color)' : 'transparent'};
 
     display: flex;
     justify-content: center;
