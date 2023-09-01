@@ -4,14 +4,16 @@ import { Link } from "react-router-dom"
 import { List } from "./style"
 
 export const NavigationHeader = () => {
-    const navList = useRef()
+    const navList = useRef<HTMLUListElement>(null)
 
     useEffect(() => {
         const menuActive = document.getElementsByTagName('header')[0]
 
-        navList.current.addEventListener('click', () => {
-            if (menuActive) menuActive.classList.remove('menu-active')
-        })
+        if (navList.current) {
+            navList.current.addEventListener('click', () => {
+                if (menuActive) menuActive.classList.remove('menu-active')
+            })
+        }
     }, [])
 
     return (
