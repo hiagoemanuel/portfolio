@@ -1,11 +1,13 @@
 import { Link, useParams } from "react-router-dom";
-import React, { useEffect, useState } from "react";
+
+import { useEffect, useState } from "react";
 
 import { ProjectType, projects } from "../../../constants/projects/projects";
 
 import { Container, MainTitle } from "../../../styles/global-components";
-import { ReactComponent as ChanICON } from '../../../assets/icons/link-icon/chain-icon.svg';
-import { ReactComponent as GitHubICON } from '../../../assets/icons/link-icon/github-icon.svg';
+
+import { ReactComponent as ChanICON } from '../../../svgs/icons/link-icon/chain-icon.svg';
+import { ReactComponent as GitHubICON } from '../../../svgs/icons/link-icon/github-icon.svg';
 
 import { Content, Informations, LinkButton, Links, ProjectAbout, ProjectDemo } from "./style";
 import { Responsive } from "./responsive";

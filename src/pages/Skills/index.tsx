@@ -4,7 +4,7 @@ import { useState } from 'react'
 import { skills } from '../../constants/skills/skills'
 
 import { Container, MainTitle } from '../../styles/global-components'
-import { ReactComponent as OwlILLU } from '../../assets/illustrations/owl-illustration.svg'
+import { ReactComponent as OwlILLU } from '../../svgs/illustrations/owl-illustration.svg'
 
 import { Responsive } from './responsive'
 import { ContentContainer, IconContainer, Skill, SkillIntroduction, SkillName } from './style'

@@ -1,11 +1,11 @@
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 
-import { AboutMe } from './About-me'
-import { Contact } from './Contact'
 import { Header } from '../components/Header'
 import { Home } from './Home-page'
-import { ProjectDetails } from './Projects/ProjectDetails'
+import { AboutMe } from './About-me'
+import { Contact } from './Contact'
 import { Projects } from './Projects'
+import { ProjectDetails } from './Projects/ProjectDetails'
 import { Skills } from './Skills'
 
 import styled from 'styled-components'

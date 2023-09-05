@@ -2,7 +2,7 @@ import { ReactSVG } from "react-svg"
 
 import { contact } from "../../constants/contact/contact"
 
-import { ReactComponent as CatSVG } from '../../assets/illustrations/cat-illustration.svg'
+import { ReactComponent as CatSVG } from '../../svgs/illustrations/cat-illustration.svg'
 import { Container, MainTitle } from "../../styles/global-components"
 
 import { ContactInformation, Footer, MainContent, PersonalContact } from "./style"
