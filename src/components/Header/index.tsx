@@ -1,7 +1,7 @@
 import { MainThemes } from './MainThemes'
 import { MenuHamburger } from './MenuHamburger'
 import { NavigationHeader } from './NavigationHeader'
-import { ReactComponent as LogoSVG } from '../../assets/icons/logo.svg'
+import { ReactComponent as LogoSVG } from '../../svgs/icons/logo.svg'
 
 import { HeaderStyle } from './style'
 import { Responsive } from './responsive'

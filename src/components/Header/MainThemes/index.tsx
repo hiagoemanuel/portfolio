@@ -2,8 +2,8 @@ import { useContext, useState } from 'react'
 
 import { ThemeContext, theme } from '../../../contexts/themes'
 
-import { ReactComponent as DarkSVG } from '../../../assets/icons/theme-icons/dark-mode.svg'
-import { ReactComponent as LightSVG } from '../../../assets/icons/theme-icons/light-mode.svg'
+import { ReactComponent as DarkSVG } from '../../../svgs/icons/theme-icons/dark-mode.svg'
+import { ReactComponent as LightSVG } from '../../../svgs/icons/theme-icons/light-mode.svg'
 
 import { ThemeButtonStyle } from './style'
 

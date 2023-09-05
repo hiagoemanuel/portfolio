@@ -2,10 +2,10 @@ import { useContext, useRef, useState } from "react"
 
 import { CarouselContext } from "../../../contexts/current-carousel"
 
-import { ReactComponent as NEXTSVG} from '../../../assets/icons/player-control/next-button.svg'
-import { ReactComponent as PAUSESVG} from '../../../assets/icons/player-control/pause-button.svg'
-import { ReactComponent as PLAYSVG} from '../../../assets/icons/player-control/play-button.svg'
-import { ReactComponent as PrevSVG} from '../../../assets/icons/player-control/previous-button.svg'
+import { ReactComponent as NEXTSVG } from '../../../svgs/icons/player-control/next-button.svg'
+import { ReactComponent as PAUSESVG } from '../../../svgs/icons/player-control/pause-button.svg'
+import { ReactComponent as PLAYSVG } from '../../../svgs/icons/player-control/play-button.svg'
+import { ReactComponent as PrevSVG } from '../../../svgs/icons/player-control/previous-button.svg'
 import { ProgressBar } from "./ProgressBar"
 
 import { Container, Bar, Controls } from "./style"

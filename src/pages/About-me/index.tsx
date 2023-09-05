@@ -1,8 +1,8 @@
 import { aboutMe } from "../../constants/about-me"
 
 import { Container, MainTitle } from "../../styles/global-components"
-import ProfileIMG from '../../assets/profile-photo.jpg';
-import { ReactComponent as FoxILLU } from '../../assets/illustrations/fox-illustration.svg'
+import ProfileIMG from '/assets/profile-photo.jpg';
+import { ReactComponent as FoxILLU } from '../../svgs/illustrations/fox-illustration.svg'
 
 import { Discription, MainContent, ProfilePhoto } from "./style"
 import { Responsive } from "./responsive"
