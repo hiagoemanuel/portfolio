@@ -1,12 +1,5 @@
 import { ReactNode, createContext, useState } from "react";
 
-const initialValue = {
-    currentIllustration: 0,
-    setCurrentIllustration: (newIllu: number) => { },
-    progressBar: 0,
-    setProgressBar: (newProgress: number) => { }
-}
-
 type PropsCarouselContext = {
     currentIllustration: number,
     setCurrentIllustration: (newIllu: number) => void,
@@ -14,12 +7,18 @@ type PropsCarouselContext = {
     setProgressBar: (newProgress: number) => void
 }
 
+
+export const CarouselContext = createContext<PropsCarouselContext>({
+    currentIllustration: 0,
+    setCurrentIllustration: () => { },
+    progressBar: 0,
+    setProgressBar: () => { }
+})
+
 type PropsProvider = { children: ReactNode }
 
-export const CarouselContext = createContext<PropsCarouselContext>(initialValue)
-
 export const CarouselProvider = ({ children }: PropsProvider) => {
-    const [currentIllustration, setCurrentIllustration] = useState<number>(0)
+    const [currentIllustration, setCurrentIllustration] = useState(0)
     const [progressBar, setProgressBar] = useState(0)
 
     return (
@@ -28,3 +27,4 @@ export const CarouselProvider = ({ children }: PropsProvider) => {
         </CarouselContext.Provider>
     )
 }
+

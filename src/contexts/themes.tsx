@@ -21,20 +21,18 @@ export const theme: Themes = {
     }
 }
 
-const initialValue = {
-    mainTheme: theme.lightMode,
-    setMainTheme: (theme: Theme) => { }
-}
-
-type PropsProvider = { children: React.ReactNode }
 
 type PropThemeContext = {
     mainTheme: Theme,
     setMainTheme: (theme: Theme) => void
 }
 
-export const ThemeContext = createContext<PropThemeContext>(initialValue)
+export const ThemeContext = createContext<PropThemeContext>({
+    mainTheme: theme.lightMode,
+    setMainTheme: () => { }
+})
 
+type PropsProvider = { children: React.ReactNode }
 const storageTheme = localStorage.getItem('portTheme')
 
 export const ThemeProvider = ({ children }: PropsProvider) => {

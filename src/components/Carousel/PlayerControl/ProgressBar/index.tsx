@@ -13,7 +13,7 @@ export const ProgressBar = ({ pauseStatus, bar, carousel }: ComponentProps) => {
     const carouselTimer: number = 10 // seconds
 
     useEffect(() => {
-        let timer: NodeJS.Timeout
+        let timer: number
 
         if (bar.current !== null) {
             const barWidth = bar.current.clientWidth
