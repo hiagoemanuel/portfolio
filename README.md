@@ -52,7 +52,7 @@
         <p>Na raiz da pasta, com <em>node.js</em> instalado, execute o comando: <code>npm install</code></p>
     </li>
     <li>
-        <p>Ainda no terminal, execute o comando: <code>npm start</code></p>
+        <p>Ainda no terminal, execute o comando: <code>npm run dev</code></p>
     </li>
     <li>
         <p>Agora basta aproveitar a aplicação. 🤗</p>
