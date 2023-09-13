@@ -6,7 +6,14 @@ export const MenuHamburger = () => {
         const header = document.getElementsByTagName('header')[0]
         const menuActive = document.getElementsByClassName('menu-active')[0]
 
-        menuActive ? header.classList.remove('menu-active') : header.classList.add('menu-active')
+        if (menuActive) {
+            header.classList.remove('menu-active')
+            document.body.style.overflowY = 'auto'
+        } else {
+            header.classList.add('menu-active')
+            document.body.style.overflowY = 'hidden'
+        }
+
     }
 
     return (

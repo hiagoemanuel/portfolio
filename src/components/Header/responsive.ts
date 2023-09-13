@@ -11,6 +11,8 @@ export const Responsive = createGlobalStyle`
             height: 100px;
             padding: 15px 50px;
 
+            position: static;
+            
             flex-direction: row;
             ${ThemeButtonStyle}, nav { display: none; }
 
@@ -21,14 +23,18 @@ export const Responsive = createGlobalStyle`
                 height: 100vh;
                 padding: 50px 30px;
 
+                position: absolute;
+                top: 0;
+                left: 0;
+
                 background-color: var(--secondary-color);
+                
                 ul li a, path {
                     color: var(--primary-color);
                     fill: var(--primary-color);
                 }
 
                 flex-direction: column;
-                overflow: hidden;
                 z-index: 1000;
                 
                 svg { max-width: 12rem; }

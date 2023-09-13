@@ -1,6 +1,13 @@
 import { createGlobalStyle } from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
+    body {
+        background-color: var(--secondary-color);
+        overflow-x: hidden;
+
+        
+    }
+
     *{ scroll-behavior: smooth; }
 
     html {

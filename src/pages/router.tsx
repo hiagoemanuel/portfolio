@@ -30,24 +30,21 @@ export const AppRoutes = () => {
 }
 
 const MainContainer = styled.main`
-    width: calc(100vw - 150px);
-    height: 100vh;
+    width: calc(100% - 150px);
+    height: 100%;
     padding: 5%;
     margin: 0 0 0 150px;
 
     display: grid;
     position: relative;
-    overflow-x: hidden;
-
-    background-color: var(--secondary-color);
-
+    
     @media (max-width: 1000px) {
-        width: 100vw;
-        height: calc(100vh - 100px);
-        margin: 100px 0 0 0;
+        width: 100%;
+        height: calc(100% - 100px);
+        margin: 0;
+
     }
     @media (max-width: 400px) {
-        height: calc(100vh - 60px);
-        margin: 60px 0 0 0;
+        height: calc(100 - 60px);
     }
 `

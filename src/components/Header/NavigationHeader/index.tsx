@@ -11,7 +11,10 @@ export const NavigationHeader = () => {
 
         if (navList.current) {
             navList.current.addEventListener('click', () => {
-                if (menuActive) menuActive.classList.remove('menu-active')
+                if (menuActive) {
+                    menuActive.classList.remove('menu-active')
+                    document.body.style.overflowY = 'auto'
+                }
             })
         }
     }, [])
