@@ -22,13 +22,26 @@ export const Content = styled.div`
         font-size: 5rem;
         font-weight: 700;
     }
+
+    @media (max-width: 1000px) {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+
+        .return-btn { display: flex; }
+    }
 `
 
 export const ProjectDemo = styled.img`
     max-width: 400px;
-    /* max-height: 400px; */
 
     border: 3px solid var(--primary-color);
+
+    @media (max-width: 1000px) {
+        width: 300px;
+    }
+
+    @media (max-width: 335px) { width: 100%; }
 `
 
 export const ProjectAbout = styled.div`
@@ -38,6 +51,12 @@ export const ProjectAbout = styled.div`
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
+    @media (max-width: 1000px) {
+        height: auto;
+        justify-content: stretch;
+        gap: 30px;
+    }
 `
 
 export const Informations = styled.div`
@@ -50,12 +69,21 @@ export const Informations = styled.div`
         font-size: 2.4rem;
         text-align: justify;
     }
+
+    @media (max-width: 580px) {
+        h2 { font-size: 2.8rem; }
+        p { font-size: 1.8rem; }
+    }
 `
 
 export const Links = styled.div`
     display: flex;
     justify-content: flex-start;
     gap: 20px;
+
+    @media (max-width: 400px) {
+        gap: 10px;
+    }
 `
 
 export const LinkButton = styled.a`
@@ -77,5 +105,14 @@ export const LinkButton = styled.a`
         margin-right: 10px;
 
         path { fill: var(--secondary-color) }
+    }
+
+    @media (max-width: 580px) {
+        width: 100%;
+    }
+
+    @media (max-width: 400px) {
+        font-size: 1.4rem;
+        padding: 10px;
     }
 `

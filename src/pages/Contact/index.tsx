@@ -6,12 +6,10 @@ import { ReactComponent as CatSVG } from '../../svgs/illustrations/cat-illustrat
 import { Container, MainTitle } from "../../styles/global-components"
 
 import { ContactInformation, Footer, MainContent, PersonalContact } from "./style"
-import { Responsive } from "./responsive"
 
 export const Contact = () => {
     return (
         <Container>
-            <Responsive />
             <MainTitle>Contato</MainTitle>
             <MainContent>
                 <CatSVG className="cat-illu" />

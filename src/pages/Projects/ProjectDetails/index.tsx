@@ -10,7 +10,6 @@ import { ReactComponent as ChanICON } from '../../../svgs/icons/link-icon/chain-
 import { ReactComponent as GitHubICON } from '../../../svgs/icons/link-icon/github-icon.svg';
 
 import { Content, Informations, LinkButton, Links, ProjectAbout, ProjectDemo } from "./style";
-import { Responsive } from "./responsive";
 
 export const ProjectDetails = () => {
     const routeUrl = useParams().id
@@ -23,7 +22,6 @@ export const ProjectDetails = () => {
 
     return projectData ? (
         <Container>
-            <Responsive />
             <MainTitle>Projetos</MainTitle>
             <Content>
                 <Link to="/projects" className="return-btn" >{'<'}</Link>

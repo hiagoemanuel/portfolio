@@ -2,11 +2,9 @@ import { Carousel } from "../../components/Carousel";
 import { CarouselProvider } from "../../contexts/current-carousel";
 
 import { Content, Occupation, Presentation, Salutation } from "./style"
-import { Responsive } from "./responsive";
 
 export const Home = () => (
     <Content>
-        <Responsive />
         <Presentation>
             <Salutation>
                 Olá,<br />

@@ -6,12 +6,10 @@ import ProfileIMG from '/assets/profile-photo.jpg';
 import { ReactComponent as FoxILLU } from '../../svgs/illustrations/fox-illustration.svg'
 
 import { Discription, MainContent, ProfilePhoto } from "./style"
-import { Responsive } from "./responsive"
 
 export const AboutMe = () => {
     return (
         <Container>
-            <Responsive />
             <MainTitle>Sobre Mim</MainTitle>
             <MainContent>
                 <ProfilePhoto src={ProfileIMG} alt="profile_photo" />

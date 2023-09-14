@@ -5,12 +5,10 @@ import { projects } from '../../constants/projects/projects'
 import { Container, MainTitle } from '../../styles/global-components'
 
 import { GridProjects } from './style'
-import { Responsive } from './responsive'
 
 export const Projects = () => {
     return (
         <Container>
-            <Responsive />
             <MainTitle>Projetos</MainTitle>
             <GridProjects>
                 {
