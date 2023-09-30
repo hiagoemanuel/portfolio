@@ -1,6 +1,7 @@
 import { Link, useParams } from "react-router-dom";
 
 import { useEffect, useState } from "react";
+import { ReactSVG } from "react-svg";
 
 import { ProjectType, projects } from "../../../constants/projects/projects";
 
@@ -9,7 +10,9 @@ import { Container, MainTitle } from "../../../styles/global-components";
 import { ReactComponent as ChanICON } from '../../../svgs/icons/link-icon/chain-icon.svg';
 import { ReactComponent as GitHubICON } from '../../../svgs/icons/link-icon/github-icon.svg';
 
-import { Content, Informations, LinkButton, Links, ProjectAbout, ProjectDemo } from "./style";
+import { Content, Informations, LinkButton, Links, ProjectAbout, ProjectDemo, ProjectTechs } from "./style";
+
+
 
 export const ProjectDetails = () => {
     const routeUrl = useParams().id
@@ -31,6 +34,13 @@ export const ProjectDetails = () => {
                         <h2>{projectData.name}</h2>
                         <p>{projectData.discription}</p>
                     </Informations>
+                    <ProjectTechs>
+                        {
+                            projectData.techs.map(tech => (
+                                <ReactSVG src={tech} key={tech} />
+                            ))
+                        }
+                    </ProjectTechs>
                     <Links>
                         <LinkButton href={projectData.links.webSiteAccess} target="_blanck">
                             <ChanICON />

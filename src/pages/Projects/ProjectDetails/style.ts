@@ -76,6 +76,17 @@ export const Informations = styled.div`
     }
 `
 
+export const ProjectTechs = styled.div`
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+
+    svg {
+        width: 45px;
+    }
+`
+
 export const Links = styled.div`
     display: flex;
     justify-content: flex-start;
