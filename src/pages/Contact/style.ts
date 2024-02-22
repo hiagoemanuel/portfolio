@@ -48,7 +48,7 @@ export const Footer = styled.footer`
 
     position: absolute;
     bottom: 0px;
-    left: 0px;
+    left: 150px;
     
     display: flex;
     flex-direction: column;
@@ -59,7 +59,10 @@ export const Footer = styled.footer`
         font-weight: 400px;
     }
 
-    @media (max-width: 1000px) { bottom: calc(-5% - 40px); }
+    @media (max-width: 1000px) {
+        bottom: calc(-5% - 40px);
+        left: 0;
+    }
 
     @media (max-width: 835px) { align-items: center; }
 `

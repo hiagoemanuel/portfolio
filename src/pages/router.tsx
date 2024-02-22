@@ -36,7 +36,6 @@ const MainContainer = styled.main`
     margin: 0 0 0 150px;
 
     display: grid;
-    position: relative;
     
     @media (max-width: 1000px) {
         width: 100%;
