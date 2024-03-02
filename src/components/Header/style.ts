@@ -67,10 +67,6 @@ export const HeaderStyle = styled.header`
                 right: 50px;
                 
                 .line-1, .line-2, .line-3 { background-color: var(--primary-color); }
-
-                .line-1 { transform: rotate(45deg) translate(30%, 22px); }
-                .line-2 { opacity: 0; }
-                .line-3 { transform: rotate(-45deg) translate(30%, -22px); }
             }
         }
     }
@@ -82,10 +78,7 @@ export const HeaderStyle = styled.header`
         .logo { width: 30px; }
 
         ${HamburgerStyle} {
-            width: 30px;
-            height: 30px;
-
-            .line-1, .line-2, .line-3 { height: 5px; }
+            scale: .5;
         }
 
         &.menu-active {
@@ -96,9 +89,6 @@ export const HeaderStyle = styled.header`
             ${HamburgerStyle} {
                 top: 15px;
                 right: 20px;
-
-                .line-1 { transform: rotate(45deg) translate(30%, 9px); }
-                .line-3 { transform: rotate(-45deg) translate(30%, -9px); }
             }
         }
     }
