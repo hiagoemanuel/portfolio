@@ -1,19 +1,21 @@
-import { useState } from "react"
 import { HamburgerStyle } from "./style"
 
-export const MenuHamburger = () => {
-    const [isActive, setIsActive] = useState<boolean>(false)
+interface IProps {
+    menuIsActive: boolean
+    setMenuIsActive: React.Dispatch<React.SetStateAction<boolean>>
+}
 
+export const MenuHamburger = ({ menuIsActive, setMenuIsActive }: IProps) => {
     const toggleMenu = () => {
         const header = document.getElementsByTagName('header')[0]
 
-        if (isActive) {
+        if (menuIsActive) {
             header.classList.remove('menu-active')
-            setIsActive(false)
+            setMenuIsActive(false)
             document.body.style.overflowY = 'auto'
         } else {
             header.classList.add('menu-active')
-            setIsActive(true)
+            setMenuIsActive(true)
             document.body.style.overflowY = 'hidden'
         }
     }
@@ -21,7 +23,7 @@ export const MenuHamburger = () => {
     return (
         <HamburgerStyle
             onClick={() => toggleMenu()}
-            className={isActive ? 'active' : 'not-active'}
+            className={menuIsActive ? 'active' : 'not-active'}
         >
             <div className="line-1"></div>
             <div className="line-2"></div>
