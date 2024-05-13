@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import { Noto_Sans } from 'next/font/google'
 import './globals.css'
+import MenuCollapse from '@/components/MenuCollapse'
 
 const notoSans = Noto_Sans({
   subsets: ['latin'],
@@ -18,7 +19,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className={notoSans.className}>{children}</body>
+      <body className={`${notoSans.className} relative`}>
+        <MenuCollapse />
+        {children}
+      </body>
     </html>
   )
 }
