@@ -14,7 +14,6 @@ export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
   const [isDark, setIsDark] = useState<boolean>(false)
 
   useEffect(() => {
-    console.log('pass')
     const htmlRef = document.getElementsByTagName('html')[0]
     if (htmlRef.classList.contains('dark')) {
       htmlRef.classList.remove('dark')

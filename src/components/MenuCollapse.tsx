@@ -45,38 +45,46 @@ export default function MenuHamburger() {
       <button
         ref={btnRef}
         onClick={handlerMenu}
-        className={`menu-btn outline-none z-10 w-12 min-h-12 rounded-md bg-dark dark:bg-light flex flex-col justify-center items-center gap-1 cursor-pointer ${isOpen ? 'relative' : ''}`}
-      ></button>
+        className={`menu-btn outline-none z-10 w-12 min-h-12 p-2 rounded-md bg-dark dark:bg-light flex flex-col justify-center items-center gap-1 cursor-pointer ${isOpen ? 'relative' : ''}`}
+      >
+        <span
+          className={`w-2 h-2 bg-light dark:bg-dark rounded-full ${isOpen ? 'w-4/5 h-2 absolute -rotate-45' : ''}`}
+        />
+        <span className={`w-2 h-2 bg-light dark:bg-dark rounded-full`} />
+        <span
+          className={`w-2 h-2 bg-light dark:bg-dark rounded-full ${isOpen ? 'w-4/5 h-2 absolute rotate-45' : ''}`}
+        />
+      </button>
       <nav
         ref={listRef}
         className="transition-[visibility] ease-in-out duration-500 align-top# visible mb-1 flex flex-col gap-1 menu-list"
       >
         <Link
-          className="w-12 h-12 rounded-md flex justify-center items-center bg-dark dark:bg-light"
+          className="w-12 h-12 p-2 rounded-md flex justify-center items-center bg-dark dark:bg-light"
           href="/"
         >
           <HomeIcon />
         </Link>
         <Link
-          className="w-12 h-12 rounded-md flex justify-center items-center bg-dark dark:bg-light"
+          className="w-12 h-12 p-2 rounded-md flex justify-center items-center bg-dark dark:bg-light"
           href="/"
         >
           <UserIcon />
         </Link>
         <Link
-          className="w-12 h-12 rounded-md flex justify-center items-center bg-dark dark:bg-light"
+          className="w-12 h-12 p-2 rounded-md flex justify-center items-center bg-dark dark:bg-light"
           href="/"
         >
           <BookIcon />
         </Link>
         <Link
-          className="w-12 h-12 rounded-md flex justify-center items-center bg-dark dark:bg-light"
+          className="w-12 h-12 p-2 rounded-md flex justify-center items-center bg-dark dark:bg-light"
           href="/"
         >
           <TerminalIcon />
         </Link>
         <Link
-          className="w-12 h-12 rounded-md flex justify-center items-center bg-dark dark:bg-light"
+          className="w-12 h-12 p-2 rounded-md flex justify-center items-center bg-dark dark:bg-light"
           href="/"
         >
           <PhoneIcon />
@@ -88,7 +96,7 @@ export default function MenuHamburger() {
           }}
         >
           {isDark ? (
-            <MoonIcon className="h-full bg-dark" />
+            <MoonIcon className="w-full h-full bg-dark p-1 flex items-center justify-center" />
           ) : (
             <SunIcon className="w-full p-1 bg-light" />
           )}
