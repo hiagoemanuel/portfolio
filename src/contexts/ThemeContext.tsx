@@ -17,7 +17,7 @@ export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
     const htmlRef = document.getElementsByTagName('html')[0]
     if (htmlRef.classList.contains('dark')) {
       htmlRef.classList.remove('dark')
-    } else {
+    } else if (isDark) {
       htmlRef.classList.add('dark')
     }
   }, [isDark])
