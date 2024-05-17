@@ -3,30 +3,20 @@
 import Link from 'next/link'
 import { Logo } from './svgs/Logo'
 import Switch from 'react-switch'
-import { useEffect, useState } from 'react'
+import { useContext, useEffect } from 'react'
 import resolveConfig from 'tailwindcss/resolveConfig'
 import tailwindConfig from '../../tailwind.config'
 import { SunIcon } from './svgs/SunIcon'
 import { MoonIcon } from './svgs/MoonIcon'
+import { themeContext } from '@/contexts/ThemeContext'
 
 export const Header = () => {
-  const [isDark, setIsDark] = useState<boolean>(false)
+  const { isDark, setIsDark } = useContext(themeContext)
 
   useEffect(() => {
     const radioRef = document.getElementsByClassName('react-switch-handle')[0]
     radioRef.classList.add('pointer-events-none')
   }, [])
-
-  const handlerTheme = () => {
-    const htmlRef = document.getElementsByTagName('html')[0]
-    if (isDark) {
-      setIsDark(false)
-      htmlRef.classList.remove('dark')
-    } else {
-      setIsDark(true)
-      htmlRef.classList.add('dark')
-    }
-  }
 
   const tailwindRef = resolveConfig(tailwindConfig)
   const darkColor = tailwindRef.theme.accentColor.dark as string
@@ -54,7 +44,9 @@ export const Header = () => {
       </nav>
       <Switch
         className="w-6 rotate-90 origin-[1.1rem_0.4rem]"
-        onChange={handlerTheme}
+        onChange={() => {
+          setIsDark(!isDark)
+        }}
         checked={isDark}
         width={50}
         height={24}
@@ -65,8 +57,8 @@ export const Header = () => {
         offHandleColor={isDark ? lightColor : darkColor}
         activeBoxShadow="0 0 0 0"
         handleDiameter={16}
-        uncheckedIcon={<SunIcon className="absolute top-1 right-1" />}
-        checkedIcon={<MoonIcon className="absolute top-1 left-2 -rotate-90" />}
+        uncheckedIcon={<SunIcon className="w-4 absolute top-1 right-1" />}
+        checkedIcon={<MoonIcon className="h-4 absolute top-1 left-2 -rotate-90" />}
       />
     </header>
   )

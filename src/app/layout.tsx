@@ -3,6 +3,7 @@ import { Noto_Sans } from 'next/font/google'
 import './globals.css'
 import MenuCollapse from '@/components/MenuCollapse'
 import { Header } from '@/components/Header'
+import { ThemeProvider } from '@/contexts/ThemeContext'
 
 const notoSans = Noto_Sans({
   subsets: ['latin'],
@@ -21,8 +22,10 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body className={`${notoSans.className} bg-light dark:bg-dark relative`}>
-        <Header />
-        <MenuCollapse />
+        <ThemeProvider>
+          <Header />
+          <MenuCollapse />
+        </ThemeProvider>
         {children}
       </body>
     </html>
