@@ -10,6 +10,8 @@ import { PhoneIcon } from './svgs/PhoneIcon'
 import { SunIcon } from './svgs/SunIcon'
 import { MoonIcon } from './svgs/MoonIcon'
 import { themeContext } from '@/contexts/ThemeContext'
+import { motion } from 'framer-motion'
+import { menuCollapse } from '@/libs/framer-motion/variants'
 
 export default function MenuHamburger() {
   const menuRef = useRef<HTMLDivElement>(null)
@@ -42,19 +44,27 @@ export default function MenuHamburger() {
       className="sm:hidden menu rounded-md flex flex-col-reverse transition-[height] ease-in-out duration-500 overflow-y-hidden fixed left-5 bottom-5"
       style={{ height: '3rem' }}
     >
-      <button
-        ref={btnRef}
+      <motion.button
+        className={`menu-btn outline-none z-10 w-12 min-h-12 p-2 rounded-md bg-dark dark:bg-light flex flex-col justify-center items-center gap-1 cursor-pointer`}
+        initial={false}
+        animate={isOpen ? 'open' : 'closed'}
+        transition={{
+          ease: 'easeInOut',
+        }}
         onClick={handlerMenu}
-        className={`menu-btn outline-none z-10 w-12 min-h-12 p-2 rounded-md bg-dark dark:bg-light flex flex-col justify-center items-center gap-1 cursor-pointer ${isOpen ? 'relative' : ''}`}
+        ref={btnRef}
       >
-        <span
-          className={`w-2 h-2 bg-light dark:bg-dark rounded-full ${isOpen ? 'w-4/5 h-2 absolute -rotate-45' : ''}`}
+        <motion.span
+          className={`w-2 h-2 bg-light dark:bg-dark rounded-full`}
+          variants={menuCollapse}
         />
         <span className={`w-2 h-2 bg-light dark:bg-dark rounded-full`} />
-        <span
-          className={`w-2 h-2 bg-light dark:bg-dark rounded-full ${isOpen ? 'w-4/5 h-2 absolute rotate-45' : ''}`}
+        <motion.span
+          className={`w-2 h-2 bg-light dark:bg-dark rounded-full`}
+          variants={menuCollapse}
+          custom={true}
         />
-      </button>
+      </motion.button>
       <nav
         ref={listRef}
         className="transition-[visibility] ease-in-out duration-500 align-top# visible mb-1 flex flex-col gap-1 menu-list"

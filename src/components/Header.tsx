@@ -9,6 +9,7 @@ import tailwindConfig from '../../tailwind.config'
 import { SunIcon } from './svgs/SunIcon'
 import { MoonIcon } from './svgs/MoonIcon'
 import { themeContext } from '@/contexts/ThemeContext'
+import { motion } from 'framer-motion'
 
 export const Header = () => {
   const { isDark, setIsDark } = useContext(themeContext)
@@ -23,7 +24,12 @@ export const Header = () => {
   const lightColor = tailwindRef.theme.accentColor.light as string
 
   return (
-    <header className="sticky top-0 hidden sm:flex items-center max-w-fit mx-auto p-4 bg-main rounded-b-xl gap-10">
+    <motion.header
+      className="sticky top-0 hidden sm:flex items-center max-w-fit mx-auto p-4 bg-main rounded-b-xl gap-10"
+      initial={{ y: -100 }}
+      animate={{ y: 0 }}
+      transition={{ delay: 0.2, type: 'tween' }}
+    >
       <Logo />
       <nav className="flex gap-5">
         <Link className="text-light dark:text-dark font-medium text-base md:text-2xl" href="/">
@@ -60,6 +66,6 @@ export const Header = () => {
         uncheckedIcon={<SunIcon className="w-4 absolute top-1 right-1" />}
         checkedIcon={<MoonIcon className="h-4 absolute top-1 left-2 -rotate-90" />}
       />
-    </header>
+    </motion.header>
   )
 }
