@@ -41,7 +41,7 @@ export default function MenuHamburger() {
   return (
     <div
       ref={menuRef}
-      className="sm:hidden menu rounded-md flex flex-col-reverse transition-[height] ease-in-out duration-500 overflow-y-hidden fixed left-5 bottom-5"
+      className="sm:hidden menu rounded-md flex flex-col-reverse transition-[height] ease-in-out duration-500 overflow-y-hidden fixed left-5 bottom-5 z-10"
       style={{ height: '3rem' }}
     >
       <motion.button

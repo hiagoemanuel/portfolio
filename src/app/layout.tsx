@@ -21,7 +21,9 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className={`${notoSans.className} bg-light dark:bg-dark relative`}>
+      <body
+        className={`${notoSans.className} bg-light dark:bg-dark text-dark dark:text-light relative`}
+      >
         <ThemeProvider>
           <Header />
           <MenuCollapse />

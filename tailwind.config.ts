@@ -13,6 +13,11 @@ const config: Config = {
       dark: '#201F1D',
       main: '#FF4342',
     },
+    extend: {
+      fontSize: {
+        16: '4rem',
+      },
+    },
   },
   plugins: [],
 }
