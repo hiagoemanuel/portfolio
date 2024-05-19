@@ -48,21 +48,21 @@ export default function MenuHamburger() {
         className={`menu-btn outline-none z-10 w-12 min-h-12 p-2 rounded-md bg-dark dark:bg-light flex flex-col justify-center items-center gap-1 cursor-pointer`}
         initial={false}
         animate={isOpen ? 'open' : 'closed'}
-        transition={{
-          ease: 'easeInOut',
-        }}
+        transition={{ ease: 'easeInOut' }}
         onClick={handlerMenu}
         ref={btnRef}
       >
         <motion.span
           className={`w-2 h-2 bg-light dark:bg-dark rounded-full`}
           variants={menuCollapse}
+          transition={{ duration: 0.2 }}
         />
         <span className={`w-2 h-2 bg-light dark:bg-dark rounded-full`} />
         <motion.span
           className={`w-2 h-2 bg-light dark:bg-dark rounded-full`}
           variants={menuCollapse}
           custom={true}
+          transition={{ duration: 0.2 }}
         />
       </motion.button>
       <nav
