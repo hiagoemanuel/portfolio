@@ -22,7 +22,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body
-        className={`${notoSans.className} bg-light dark:bg-dark text-dark dark:text-light relative`}
+        className={`${notoSans.className} bg-light dark:bg-dark text-dark dark:text-light relative overflow-x-hidden`}
       >
         <ThemeProvider>
           <Header />
