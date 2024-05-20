@@ -22,6 +22,7 @@ const config: Config = {
         26: '6.5rem',
       },
       fontSize: {
+        7: '1.75rem',
         16: '4rem',
       },
     },

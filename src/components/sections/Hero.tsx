@@ -1,10 +1,10 @@
 'use client'
 
-import { ContactButton } from './ContactButton'
-import { Arrow } from './svgs/Arrow'
-import { CurriculumIcon } from './svgs/CurriculumIcon'
-import { Github } from './svgs/Github'
-import { Linkedin } from './svgs/Linkedin'
+import { ContactButton } from '../ContactButton'
+import { Arrow } from '../svgs/Arrow'
+import { CurriculumIcon } from '../svgs/CurriculumIcon'
+import { Github } from '../svgs/Github'
+import { Linkedin } from '../svgs/Linkedin'
 import { motion } from 'framer-motion'
 
 export const Hero = () => {
@@ -17,11 +17,11 @@ export const Hero = () => {
           animate={{ x: 0 }}
           transition={{ delay: 0.2, type: 'tween', duration: 1, ease: 'easeInOut' }}
         >
-          <h1 className="text-16 sm:text-9xl font-extrabold leading-none bg-light dark:bg-dark">
+          <h1 className="text-16 sm:text-9xl font-extrabold leading-none pointer-events-none bg-light dark:bg-dark">
             Hiago
           </h1>
           <motion.div
-            className="flex gap-1 sm:gap-2 z-10"
+            className="flex gap-1 sm:gap-2"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 1.25, type: 'tween', duration: 0.5, ease: 'easeInOut' }}
@@ -32,7 +32,7 @@ export const Hero = () => {
           </motion.div>
         </motion.div>
         <motion.h1
-          className="text-16 sm:text-9xl font-extrabold leading-none tracking-[.25rem] sm:tracking-[.60rem]"
+          className="text-16 sm:text-9xl font-extrabold leading-none pointer-events-none tracking-[.25rem] sm:tracking-[.60rem]"
           initial={{ x: '-100vw' }}
           animate={{ x: 0 }}
           transition={{ delay: 0.2, type: 'tween', duration: 1, ease: 'easeInOut' }}
