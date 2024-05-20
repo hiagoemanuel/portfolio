@@ -1,3 +1,4 @@
+import { DotGrid } from '../DotGrid'
 import { MoreAboutButton } from '../MoreAboutButton'
 import { Title } from '../Title'
 
@@ -13,6 +14,14 @@ export const AboutMe = () => {
         eleifend dolor ac auctor.
       </p>
       <MoreAboutButton text="veja mais sobre" path="/about-me" />
+      <DotGrid
+        position="bottom-4 right-4"
+        rows={[
+          ['1', '1', '1'],
+          ['1', '1', '1'],
+          ['1', '1', '1'],
+        ]}
+      />
     </section>
   )
 }
