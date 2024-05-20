@@ -4,9 +4,9 @@ import { Title } from '../Title'
 
 export const AboutMe = () => {
   return (
-    <section className="py-12 sm:py-24">
+    <section className="py-12 sm:py-24 lg:px-28">
       <Title title="sobre mim" japTitle="私について" />
-      <p className="max-w-2xl mx-auto text-sm sm:text-2xl font-normal text-center">
+      <p className="text-sm sm:text-2xl font-normal text-center lg:text-left">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras elementum elit sapien, at
         sollicitudin lectus faucibus vitae. In a scelerisque ex. In sagittis purus et nisl commodo
         tincidunt. Aenean pharetra tincidunt quam imperdiet tempus. Proin interdum mauris dolor,
