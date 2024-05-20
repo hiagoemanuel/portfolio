@@ -4,9 +4,9 @@ import { Title } from '../Title'
 
 export const AboutMe = () => {
   return (
-    <section className="py-12">
+    <section className="py-12 sm:py-24">
       <Title title="sobre mim" japTitle="私について" />
-      <p className="text-sm font-normal text-center">
+      <p className="max-w-2xl mx-auto text-sm sm:text-2xl font-normal text-center">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras elementum elit sapien, at
         sollicitudin lectus faucibus vitae. In a scelerisque ex. In sagittis purus et nisl commodo
         tincidunt. Aenean pharetra tincidunt quam imperdiet tempus. Proin interdum mauris dolor,
@@ -15,7 +15,7 @@ export const AboutMe = () => {
       </p>
       <MoreAboutButton text="veja mais sobre" path="/about-me" />
       <DotGrid
-        position="bottom-4 right-4"
+        position="bottom-4 right-4 sm:bottom-8 sm:right-8"
         rows={[
           ['1', '1', '1'],
           ['1', '1', '1'],
