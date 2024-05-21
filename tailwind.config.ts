@@ -14,17 +14,10 @@ const config: Config = {
       main: '#FF4342',
     },
     extend: {
-      width: {
-        18: '4.5rem',
-      },
-      height: {
-        18: '4.5rem',
-        26: '6.5rem',
-      },
-      fontSize: {
-        7: '1.75rem',
-        16: '4rem',
-      },
+      width: { 18: '4.5rem' },
+      height: { 18: '4.5rem', 26: '6.5rem' },
+      fontSize: { 7: '1.75rem', 16: '4rem' },
+      screens: { xs: '420px' },
     },
   },
   plugins: [],

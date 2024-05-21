@@ -14,7 +14,7 @@ export const DotGrid = ({ rows, position }: DotGridProps) => {
     <span className={`flex flex-col gap-2 sm:gap-3 absolute ${position}`}>
       {rows.map((row, index) => {
         return (
-          <span className="flex gap-2 sm:gap-3" key={index}>
+          <span className="flex gap-2 sm:gap-3 text-" key={index}>
             {row.map((number, index) => {
               if (number === '1') {
                 return (

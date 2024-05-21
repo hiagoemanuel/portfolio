@@ -17,7 +17,7 @@ export const Hero = () => {
           animate={{ x: 0 }}
           transition={{ delay: 0.2, type: 'tween', duration: 1, ease: 'easeInOut' }}
         >
-          <h1 className="text-16 sm:text-9xl font-extrabold leading-none pointer-events-none bg-light dark:bg-dark">
+          <h1 className="text-16 xs:text-8xl sm:text-9xl font-extrabold leading-none pointer-events-none bg-light dark:bg-dark">
             Hiago
           </h1>
           <motion.div
@@ -32,7 +32,7 @@ export const Hero = () => {
           </motion.div>
         </motion.div>
         <motion.h1
-          className="text-16 sm:text-9xl font-extrabold leading-none pointer-events-none tracking-[.25rem] sm:tracking-[.60rem]"
+          className="text-16 xs:text-8xl sm:text-9xl font-extrabold leading-none pointer-events-none tracking-[.25rem] xs:tracking-[-.2rem] sm:tracking-[.60rem]"
           initial={{ x: '-100vw' }}
           animate={{ x: 0 }}
           transition={{ delay: 0.2, type: 'tween', duration: 1, ease: 'easeInOut' }}
@@ -40,7 +40,7 @@ export const Hero = () => {
           Emanuel
         </motion.h1>
         <motion.h6
-          className="text-2xl sm:text-5xl font-extralight text-center tracking-[.313rem] sm:tracking-[.60rem]"
+          className="text-2xl xs:text-4xl sm:text-5xl font-extralight text-center tracking-[.313rem] xs:tracking-[.24rem] sm:tracking-[.60rem]"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 1, type: 'tween', duration: 0.5, ease: 'easeInOut' }}
