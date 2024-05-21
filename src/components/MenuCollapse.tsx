@@ -18,7 +18,7 @@ export default function MenuHamburger() {
   const listRef = useRef<HTMLDivElement>(null)
   const btnRef = useRef<HTMLButtonElement>(null)
   const [isOpen, setIsOpen] = useState<boolean>(false)
-  const { isDark, setIsDark } = useContext(themeContext)
+  const { isDark, switchTheme } = useContext(themeContext)
 
   const handlerMenu = () => {
     const menu = menuRef.current
@@ -102,7 +102,7 @@ export default function MenuHamburger() {
         <div
           className="w-12 h-12 p-2 rounded-md flex justify-center items-center bg-dark dark:bg-light cursor-pointer"
           onClick={() => {
-            setIsDark(!isDark)
+            switchTheme(isDark ? 'light' : 'dark')
           }}
         >
           {isDark ? (

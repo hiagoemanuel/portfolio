@@ -12,7 +12,7 @@ import { themeContext } from '@/contexts/ThemeContext'
 import { motion } from 'framer-motion'
 
 export const Header = () => {
-  const { isDark, setIsDark } = useContext(themeContext)
+  const { isDark, switchTheme } = useContext(themeContext)
 
   useEffect(() => {
     const radioRef = document.getElementsByClassName('react-switch-handle')[0]
@@ -51,7 +51,7 @@ export const Header = () => {
       <Switch
         className="w-6 rotate-90 origin-[1.1rem_0.4rem]"
         onChange={() => {
-          setIsDark(!isDark)
+          switchTheme(isDark ? 'light' : 'dark')
         }}
         checked={isDark}
         width={50}

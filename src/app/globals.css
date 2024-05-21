@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+* {
+  transition-property: background-color, fill;
+  transition-duration: 500ms;
+}
+
 ::-webkit-scrollbar {
   width: 8px;
 }

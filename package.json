@@ -12,6 +12,7 @@
   "dependencies": {
     "framer-motion": "^11.2.4",
     "next": "14.2.3",
+    "nookies": "^2.5.2",
     "react": "^18",
     "react-dom": "^18",
     "react-switch": "^7.0.0"
