@@ -6,15 +6,24 @@ interface DotGridProps {
     [oneOrZero, oneOrZero, oneOrZero],
     [oneOrZero, oneOrZero, oneOrZero],
   ]
-  position: string
+  position: ['top' | 'bottom', 'right' | 'left']
 }
 
 export const DotGrid = ({ rows, position }: DotGridProps) => {
+  const direction = {
+    top: 'top-4 sm:top-8',
+    right: 'right-4 sm:right-8',
+    bottom: 'bottom-4 sm:bottom-8',
+    left: 'left-4 sm:left-8',
+  }
+
+  const MergeStyle: string = direction[position[0]] + ' ' + direction[position[1]]
+
   return (
-    <span className={`flex flex-col gap-2 sm:gap-3 absolute ${position}`}>
+    <span className={`flex flex-col gap-2 sm:gap-3 absolute ${MergeStyle}`}>
       {rows.map((row, index) => {
         return (
-          <span className="flex gap-2 sm:gap-3 text-" key={index}>
+          <span className="flex gap-2 sm:gap-3" key={index}>
             {row.map((number, index) => {
               if (number === '1') {
                 return (

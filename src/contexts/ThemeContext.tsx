@@ -11,32 +11,30 @@ interface IThemeContext {
 // eslint-disable-next-line @typescript-eslint/consistent-type-assertions
 export const themeContext = createContext({} as IThemeContext)
 
+const maxAge = { maxAge: 60 * 24 * 30 * 3 /* 3 month :P */ }
+
 export const ThemeProvider = ({ children }: { children: React.ReactNode }) => {
   const [isDark, setIsDark] = useState<boolean>(true)
 
   const switchTheme = (theme: 'dark' | 'light') => {
-    console.log(theme)
     if (theme === 'dark') {
-      console.log('dark theme')
-      setCookie(null, 'theme.he-portfolio', 'dark', { maxAge: 30 * 24 * 30 * 3 /* 3 month */ })
+      setCookie(null, 'theme.he-portfolio', 'dark', maxAge)
       setIsDark(true)
     } else if (theme === 'light') {
-      console.log('light theme')
-      setCookie(null, 'theme.he-portfolio', 'light', { maxAge: 30 * 24 * 30 * 3 /* 3 month */ })
+      setCookie(null, 'theme.he-portfolio', 'light', maxAge)
       setIsDark(false)
     }
   }
 
   useEffect(() => {
     const { 'theme.he-portfolio': theme } = parseCookies()
-    console.log('effect')
     if (theme === 'dark' || (!theme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
       document.documentElement.classList.add('dark')
-      setCookie(null, 'theme.he-portfolio', 'dark', { maxAge: 30 * 24 * 30 * 3 /* 3 month */ })
+      setCookie(null, 'theme.he-portfolio', 'dark', maxAge)
       setIsDark(true)
     } else {
       document.documentElement.classList.remove('dark')
-      setCookie(null, 'theme.he-portfolio', 'light', { maxAge: 30 * 24 * 30 * 3 /* 3 month */ })
+      setCookie(null, 'theme.he-portfolio', 'light', maxAge)
       setIsDark(false)
     }
   }, [isDark])

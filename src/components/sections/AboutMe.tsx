@@ -1,10 +1,11 @@
+import { Container } from '../Container'
 import { DotGrid } from '../DotGrid'
 import { MoreAboutButton } from '../MoreAboutButton'
 import { Title } from '../Title'
 
 export const AboutMe = () => {
   return (
-    <section className="py-12 sm:py-24 lg:px-28">
+    <Container>
       <Title title="sobre mim" japTitle="私について" />
       <p className="text-sm sm:text-2xl font-normal text-center lg:text-left">
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras elementum elit sapien, at
@@ -15,13 +16,13 @@ export const AboutMe = () => {
       </p>
       <MoreAboutButton text="veja mais sobre" path="/about-me" />
       <DotGrid
-        position="bottom-4 right-4 sm:bottom-8 sm:right-8"
+        position={['bottom', 'right']}
         rows={[
           ['1', '1', '1'],
           ['1', '1', '1'],
           ['1', '1', '1'],
         ]}
       />
-    </section>
+    </Container>
   )
 }
