@@ -8,7 +8,7 @@ export const Projects = () => {
   return (
     <Container>
       <Title title="projetos" japTitle="プロジェクト" />
-      <div className="flex justify-center gap-4 snap-x">
+      <div className="flex justify-center gap-4 snap-x overflow-x-hidden">
         <ProjectCard
           name="project 1"
           description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras elementum elit sapien, at sollicitudin lectus faucibus vitae. In a scelerisque ex."

@@ -14,8 +14,16 @@ const config: Config = {
       main: '#FF4342',
     },
     extend: {
-      width: { 18: '4.5rem', 21: '5.25rem' },
-      height: { 18: '4.5rem', 26: '6.5rem', 30: '7.5rem', 74: '18.5rem' },
+      width: { 18: '4.5rem', 21: '5.25rem', 76: '19rem' },
+      minWidth: { 76: '19rem' },
+      height: {
+        18: '4.5rem',
+        26: '6.5rem',
+        30: '7.5rem',
+        64: '10.5rem',
+        74: '18.5rem',
+        100: '25rem',
+      },
       fontSize: { 7: '1.75rem', 16: '4rem' },
       screens: { xs: '420px' },
     },
