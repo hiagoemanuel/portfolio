@@ -1,6 +1,7 @@
 import { AboutMe } from '@/components/sections/AboutMe'
 import { Hero } from '@/components/sections/Hero'
 import { Projects } from '@/components/sections/Projects'
+import { Technologies } from '@/components/sections/Technologies'
 
 export default function LandingPage() {
   return (
@@ -8,6 +9,7 @@ export default function LandingPage() {
       <Hero />
       <AboutMe />
       <Projects />
+      <Technologies />
     </main>
   )
 }

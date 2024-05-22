@@ -14,7 +14,7 @@ const config: Config = {
       main: '#FF4342',
     },
     extend: {
-      width: { 18: '4.5rem', 21: '5.25rem', 76: '19rem' },
+      width: { 18: '4.5rem', 21: '5.25rem', 37: '9.25rem', 76: '19rem' },
       minWidth: { 76: '19rem' },
       height: {
         18: '4.5rem',
