@@ -4,14 +4,21 @@ import './globals.css'
 import MenuCollapse from '@/components/MenuCollapse'
 import { Header } from '@/components/Header'
 import { ThemeProvider } from '@/contexts/ThemeContext'
+import { cookies } from 'next/headers'
 
 const notoSans = Noto_Sans({
   subsets: ['latin'],
   weight: ['200', '400', '500', '700', '800', '900'],
 })
 
-export const metadata: Metadata = {
-  title: 'Hiago Emanuel | Portfolio',
+export async function generateMetadata(): Promise<Metadata> {
+  const cookieStore = cookies()
+  const theme = cookieStore.get('theme.he-portfolio')?.value as 'dark' | 'light'
+
+  return {
+    title: 'Hiago Emanuel | Portfolio',
+    icons: [{ url: theme === 'light' ? '/favicon-light.svg' : '/favicon-dark.svg' }],
+  }
 }
 
 export default function RootLayout({
