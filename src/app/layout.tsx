@@ -15,9 +15,16 @@ export async function generateMetadata(): Promise<Metadata> {
   const cookieStore = cookies()
   const theme = cookieStore.get('theme.he-portfolio')?.value as 'dark' | 'light'
 
+  const firstLoad = [
+    { url: '/favicon-dark.svg', media: '(prefers-color-scheme: dark)' },
+    { url: '/favicon-light.svg', media: '(prefers-color-scheme: light)' },
+  ]
+
   return {
     title: 'Hiago Emanuel | Portfolio',
-    icons: [{ url: theme === 'light' ? '/favicon-light.svg' : '/favicon-dark.svg' }],
+    icons: theme
+      ? [{ url: theme === 'light' ? '/favicon-light.svg' : '/favicon-dark.svg' }]
+      : firstLoad,
   }
 }
 
