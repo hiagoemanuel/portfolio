@@ -7,6 +7,12 @@
   transition-duration: 500ms;
 }
 
+@layer components {
+  .input-form {
+    @apply  p-2 rounded-lg resize-none text-xs font-medium text-light dark:text-dark placeholder:text-light dark:placeholder:text-dark bg-main outline-none
+  }
+}
+
 ::-webkit-scrollbar {
   width: 8px;
 }
