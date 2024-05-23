@@ -6,6 +6,7 @@ import { Header } from '@/components/Header'
 import { ThemeProvider } from '@/contexts/ThemeContext'
 import { cookies } from 'next/headers'
 import { Footer } from '@/components/sections/Footer'
+import { OnTopButton } from '@/components/OnTopButton'
 
 const notoSans = Noto_Sans({
   subsets: ['latin'],
@@ -35,7 +36,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="pt-BR">
+    <html lang="pt-BR" className="scroll-smooth">
       <body
         className={`${notoSans.className} bg-light dark:bg-dark text-dark dark:text-light relative overflow-x-hidden`}
       >
@@ -44,6 +45,7 @@ export default function RootLayout({
           <MenuCollapse />
         </ThemeProvider>
         {children}
+        <OnTopButton />
         <Footer />
       </body>
     </html>

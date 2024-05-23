@@ -39,10 +39,13 @@ export default function MenuHamburger() {
   }
 
   return (
-    <div
+    <motion.div
       ref={menuRef}
       className="sm:hidden menu rounded-md flex flex-col-reverse transition-[height] ease-in-out duration-500 overflow-y-hidden fixed left-5 bottom-5 z-10"
       style={{ height: '3rem' }}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 0.5 }}
     >
       <motion.button
         className={`menu-btn outline-none z-10 w-12 min-h-12 p-2 rounded-md bg-dark dark:bg-light flex flex-col justify-center items-center gap-1 cursor-pointer`}
@@ -112,6 +115,6 @@ export default function MenuHamburger() {
           )}
         </div>
       </nav>
-    </div>
+    </motion.div>
   )
 }
