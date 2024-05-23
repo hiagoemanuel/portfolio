@@ -9,7 +9,7 @@
 
 @layer components {
   .input-form {
-    @apply  p-2 rounded-lg resize-none text-xs font-medium text-light dark:text-dark placeholder:text-light dark:placeholder:text-dark bg-main outline-none
+    @apply  p-2 sm:p-3 rounded-lg resize-none text-xs sm:text-base font-medium text-light dark:text-dark placeholder:text-light dark:placeholder:text-dark bg-main outline-none
   }
 }
 
