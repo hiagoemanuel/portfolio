@@ -9,7 +9,11 @@
 
 @layer components {
   .input-form {
-    @apply  p-2 sm:p-3 rounded-lg resize-none text-xs sm:text-base font-medium text-light dark:text-dark placeholder:text-light dark:placeholder:text-dark bg-main outline-none
+    @apply p-2 sm:p-3 rounded-lg resize-none text-xs sm:text-base font-medium text-light dark:text-dark placeholder:text-light dark:placeholder:text-dark bg-main outline-none
+  }
+
+  .full-viewport {
+    @apply min-h-[calc(100svh-2rem)] sm:min-h-[calc(100svh-3.81rem-3.25rem)] md:min-h-[calc(100svh-4.063rem-3.25rem)]
   }
 }
 

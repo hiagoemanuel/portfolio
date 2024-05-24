@@ -75,30 +75,35 @@ export default function MenuHamburger() {
         <Link
           className="w-12 h-12 p-2 rounded-md flex justify-center items-center bg-dark dark:bg-light"
           href="/"
+          onClick={handlerMenu}
         >
           <HomeIcon />
         </Link>
         <Link
           className="w-12 h-12 p-2 rounded-md flex justify-center items-center bg-dark dark:bg-light"
-          href="/"
+          href="/about-me"
+          onClick={handlerMenu}
         >
           <UserIcon />
         </Link>
         <Link
           className="w-12 h-12 p-2 rounded-md flex justify-center items-center bg-dark dark:bg-light"
-          href="/"
+          href="/projects"
+          onClick={handlerMenu}
         >
           <BookIcon />
         </Link>
         <Link
           className="w-12 h-12 p-2 rounded-md flex justify-center items-center bg-dark dark:bg-light"
-          href="/"
+          href="/technologies"
+          onClick={handlerMenu}
         >
           <TerminalIcon />
         </Link>
         <Link
           className="w-12 h-12 p-2 rounded-md flex justify-center items-center bg-dark dark:bg-light"
-          href="/"
+          href="/contact"
+          onClick={handlerMenu}
         >
           <PhoneIcon />
         </Link>

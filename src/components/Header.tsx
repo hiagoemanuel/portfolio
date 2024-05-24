@@ -35,16 +35,28 @@ export const Header = () => {
         <Link className="text-light dark:text-dark font-medium text-base md:text-2xl" href="/">
           início
         </Link>
-        <Link className="text-light dark:text-dark font-medium text-base md:text-2xl" href="/">
+        <Link
+          className="text-light dark:text-dark font-medium text-base md:text-2xl"
+          href="/about-me"
+        >
           sobre mim
         </Link>
-        <Link className="text-light dark:text-dark font-medium text-base md:text-2xl" href="/">
+        <Link
+          className="text-light dark:text-dark font-medium text-base md:text-2xl"
+          href="/projects"
+        >
           projetos
         </Link>
-        <Link className="text-light dark:text-dark font-medium text-base md:text-2xl" href="/">
+        <Link
+          className="text-light dark:text-dark font-medium text-base md:text-2xl"
+          href="/technologies"
+        >
           tecnologias
         </Link>
-        <Link className="text-light dark:text-dark font-medium text-base md:text-2xl" href="/">
+        <Link
+          className="text-light dark:text-dark font-medium text-base md:text-2xl"
+          href="/contact"
+        >
           contato
         </Link>
       </nav>
