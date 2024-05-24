@@ -13,7 +13,7 @@
   }
 
   .full-viewport {
-    @apply min-h-[calc(100svh-2rem)] sm:min-h-[calc(100svh-3.81rem-3.25rem)] md:min-h-[calc(100svh-4.063rem-3.25rem)]
+    @apply  mx-auto max-w-[1400px] min-h-[calc(100svh-2rem)] sm:min-h-[calc(100svh-3.81rem-3.25rem)] md:min-h-[calc(100svh-4.063rem-3.25rem)]
   }
 }
 

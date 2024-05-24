@@ -36,9 +36,9 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="pt-BR" className="scroll-smooth">
+    <html lang="pt-BR" className="scroll-smooth overflow-x-hidden">
       <body
-        className={`${notoSans.className} bg-light dark:bg-dark text-dark dark:text-light relative overflow-x-hidden`}
+        className={`${notoSans.className} bg-light dark:bg-dark text-dark dark:text-light relative`}
       >
         <ThemeProvider>
           <Header />
