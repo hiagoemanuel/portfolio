@@ -48,7 +48,7 @@ export default function MenuHamburger() {
       transition={{ duration: 0.5 }}
     >
       <motion.button
-        className={`menu-btn outline-none z-10 w-12 min-h-12 p-2 rounded-md bg-dark dark:bg-light flex flex-col justify-center items-center gap-1 cursor-pointer`}
+        className={`menu-btn outline-none z-10 w-12 min-h-12 p-2 rounded-md border border-light dark:border-dark bg-dark dark:bg-light flex flex-col justify-center items-center gap-1 cursor-pointer`}
         initial={false}
         animate={isOpen ? 'open' : 'closed'}
         transition={{ ease: 'easeInOut' }}

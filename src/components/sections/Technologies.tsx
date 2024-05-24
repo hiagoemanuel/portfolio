@@ -20,7 +20,7 @@ export const Technologies = () => {
         <TechCard name="Next.js" icon={<NextJs />} />
         <TechCard name="Next.js" icon={<NextJs />} />
       </div>
-      <MoreAboutButton text="veja todas tecnologias" path="/tecnologies" />
+      <MoreAboutButton text="veja todas tecnologias" path="/technologies" />
       <DotGrid
         position={['top', 'right']}
         rows={[
