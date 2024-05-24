@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 export default function AboutMePage() {
   return (
-    <main className="full-viewport pt-12 sm:pt-16 pb-18 sm:pb-36 xl:pb-16 lg:px-16 relative">
+    <main className="full-viewport relative">
       <Title title="sobre mim" japTitle="私について" />
       <div className="flex flex-col lg:flex-row gap-3 xs:gap-8 xl:gap-14 items-center lg:items-start">
         <p className=" text-sm sm:text-2xl xs:px-3 lg:px-0 font-normal text-center lg:text-left">

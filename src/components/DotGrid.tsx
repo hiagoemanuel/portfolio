@@ -12,10 +12,10 @@ interface DotGridProps {
 
 export const DotGrid = ({ rows, position, className }: DotGridProps) => {
   const direction = {
-    top: 'top-4 sm:top-8',
-    right: 'right-4 sm:right-8',
-    bottom: 'bottom-4 sm:bottom-8',
-    left: 'left-4 sm:left-8',
+    top: 'top-4',
+    right: 'right-4',
+    bottom: 'bottom-4',
+    left: 'left-4',
   }
 
   const MergeStyle: string = direction[position[0]] + ' ' + direction[position[1]]
