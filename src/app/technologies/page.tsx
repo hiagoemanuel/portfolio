@@ -14,7 +14,7 @@ function makeList<T>(obj: T, repeat: number): T[] {
   return list
 }
 
-export default function Technologies() {
+export default function TechnologiesPage() {
   const techList = makeList(exempleTech, 6)
 
   return (
