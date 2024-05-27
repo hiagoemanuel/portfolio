@@ -10,11 +10,14 @@ interface ProjectCardProps {
     toView: string
     repository: string
   }
+  className?: string
 }
 
-export const ProjectCard = ({ name, description, links }: ProjectCardProps) => {
+export const ProjectCard = ({ name, description, links, className }: ProjectCardProps) => {
   return (
-    <div className="min-w-56 sm:min-w-76 w-56 sm:w-76 h-74 sm:h-100 p-1 rounded-lg sm:rounded-xl bg-main flex flex-col justify-between">
+    <div
+      className={`${className} min-w-56 sm:min-w-76 w-56 sm:w-76 h-74 sm:h-100 p-1 rounded-lg sm:rounded-xl bg-main flex flex-col justify-between`}
+    >
       <div className="text-light dark:text-dark">
         <div className="w-full h-30 sm:h-64 mb-1 rounded-lg overflow-y-hidden">
           <Image
