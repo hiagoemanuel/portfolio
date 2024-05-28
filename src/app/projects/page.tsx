@@ -4,6 +4,7 @@ import { Title } from '@/components/Title'
 
 const exempleProject = {
   name: 'Project',
+  image: '/project-exemple.jpg',
   description:
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras elementum elit sapien, at sollicitudin lectus faucibus vitae. In a scelerisque ex.',
   links: {
@@ -26,7 +27,13 @@ export default function ProjectsPage() {
       <Title title="projetos" japTitle="プロジェクト" />
       <div className="flex flex-wrap justify-center gap-2 md:gap-7">
         {projectList.map((p, i) => (
-          <ProjectCard {...p} key={i} />
+          <ProjectCard
+            thumbnail={p.image}
+            name={p.name}
+            description={p.description}
+            links={p.links}
+            key={i}
+          />
         ))}
       </div>
       <DotGrid

@@ -3,8 +3,11 @@
 import { useRef, useState } from 'react'
 import { ProjectCard } from './ProjectCard'
 
+type MouseEventType = React.MouseEvent<HTMLInputElement>
+
 const exempleProject = {
   name: 'Project',
+  image: '/project-exemple.jpg',
   description:
     'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras elementum elit sapien, at sollicitudin lectus faucibus vitae. In a scelerisque ex.',
   links: {
@@ -25,13 +28,13 @@ export const ProjectCarousel = () => {
   const [draggable, setDraggable] = useState<boolean>(false)
   const [initScroll, setInitScroll] = useState<{ scrollLeft: number; pageX: number }>()
 
-  const startDrag = (e: React.MouseEvent<HTMLInputElement>) => {
+  const startDrag = (e: MouseEventType) => {
     if (!wrapperRef.current) return
     setDraggable(true)
     setInitScroll({ scrollLeft: wrapperRef.current.scrollLeft, pageX: e.pageX })
   }
 
-  const dragging = (e: React.MouseEvent<HTMLInputElement>) => {
+  const dragging = (e: MouseEventType) => {
     if (!wrapperRef.current || !draggable || !initScroll) return
     wrapperRef.current.scrollLeft = initScroll.scrollLeft - (e.pageX - initScroll.pageX)
   }
@@ -39,12 +42,12 @@ export const ProjectCarousel = () => {
   return (
     <div className="flex justify-center">
       <div
-        className={`flex gap-4 transition-all overflow-x-scroll snap-x lg:overflow-x-visible lg:cursor-default lg:select-auto scroll-smooth scrollbar-hide ${draggable ? 'cursor-grabbing select-none' : 'cursor-grab'}`}
+        className={`flex gap-4 transition-all overflow-x-scroll lg:overflow-x-visible lg:cursor-default lg:select-auto scroll-smooth scrollbar-hide ${draggable ? 'cursor-grabbing select-none' : 'cursor-grab'}`}
         ref={wrapperRef}
-        onMouseDown={(e: React.MouseEvent<HTMLInputElement>) => {
+        onMouseDown={(e: MouseEventType) => {
           startDrag(e)
         }}
-        onMouseMove={(e: React.MouseEvent<HTMLInputElement>) => {
+        onMouseMove={(e: MouseEventType) => {
           dragging(e)
         }}
         onMouseUp={() => {
@@ -56,7 +59,13 @@ export const ProjectCarousel = () => {
       >
         <div />
         {projectList.map((p, i) => (
-          <ProjectCard className="snap-center" {...p} key={i} />
+          <ProjectCard
+            name={p.name}
+            thumbnail={p.image}
+            description={p.description}
+            links={p.links}
+            key={i}
+          />
         ))}
         <div />
       </div>
