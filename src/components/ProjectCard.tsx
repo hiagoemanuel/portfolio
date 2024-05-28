@@ -26,7 +26,7 @@ export const ProjectCard = ({
     >
       <div className="text-light dark:text-dark">
         <div
-          className={`w-full h-30 sm:h-64 mb-1 relative rounded-lg overflow-y-hidden transition-[background] duration-1000 ease-linear hover:bg-bottom`}
+          className={`w-full h-30 sm:h-64 mb-1 relative rounded-lg overflow-y-hidden transition-[background] bg-cover duration-1000 ease-linear hover:bg-bottom`}
           style={{ backgroundImage: `url(${thumbnail})` }}
         />
         <h3 className="text-xl sm:text-3xl text-center sm:text-start font-medium">{name}</h3>
