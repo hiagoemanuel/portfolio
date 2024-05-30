@@ -15,8 +15,8 @@ export default function AboutMePage() {
           eleifend dolor ac auctor.
         </p>
         <Image
-          className="w-50 h-50 xs:w-76 xs:h-76 xl:w-100 xl:h-100 rounded-lg box-content outline border-4 border-dark dark:border-light"
-          src="https://singlecolorimage.com/get/FF4342/400x400"
+          className="w-50 h-50 xs:w-76 xs:h-76 xl:w-100 xl:h-100 rounded-lg outline border-4 border-dark dark:border-light"
+          src="/aboutme-exemple.png"
           alt="about me picture"
           width={400}
           height={400}

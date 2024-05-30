@@ -25,7 +25,7 @@ export const Header = () => {
 
   return (
     <motion.header
-      className="sticky top-0 z-20 hidden border border-t-0 border-light dark:border-dark sm:flex items-center max-w-fit mx-auto p-4 bg-main rounded-b-xl gap-10"
+      className="sticky top-0 z-10 hidden border border-t-0 border-light dark:border-dark sm:flex items-center max-w-fit mx-auto p-4 bg-main rounded-b-xl gap-10"
       initial={{ y: -100 }}
       animate={{ y: 0 }}
       transition={{ delay: 0.2, type: 'tween' }}

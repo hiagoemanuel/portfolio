@@ -7,6 +7,7 @@ import { ThemeProvider } from '@/contexts/ThemeContext'
 import { cookies } from 'next/headers'
 import { Footer } from '@/components/sections/Footer'
 import { OnTopButton } from '@/components/OnTopButton'
+import { AnimatePresenceWrapper } from '@/libs/framer-motion/AnimatePresenceWrapper'
 
 const notoSans = Noto_Sans({
   subsets: ['latin'],
@@ -44,9 +45,10 @@ export default function RootLayout({
           <Header />
           <MenuCollapse />
         </ThemeProvider>
-        {children}
+        <AnimatePresenceWrapper>{children}</AnimatePresenceWrapper>
         <OnTopButton />
         <Footer />
+        <span className="bg-cyan" />
       </body>
     </html>
   )
