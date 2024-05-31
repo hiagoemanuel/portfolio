@@ -48,7 +48,7 @@ export default function RootLayout({
         <AnimatePresenceWrapper>{children}</AnimatePresenceWrapper>
         <OnTopButton />
         <Footer />
-        <span className="bg-cyan" />
+        <span className="bg-[#c9c3b4] dark:bg-[#111111]" />
       </body>
     </html>
   )
