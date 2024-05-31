@@ -7,7 +7,7 @@ import { ThemeProvider } from '@/contexts/ThemeContext'
 import { cookies } from 'next/headers'
 import { Footer } from '@/components/sections/Footer'
 import { OnTopButton } from '@/components/OnTopButton'
-import { AnimatePresenceWrapper } from '@/libs/framer-motion/AnimatePresenceWrapper'
+import { AnimatePresenceWrapper } from '@/services/framer-motion/AnimatePresenceWrapper'
 
 const notoSans = Noto_Sans({
   subsets: ['latin'],

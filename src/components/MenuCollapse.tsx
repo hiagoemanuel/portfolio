@@ -11,7 +11,7 @@ import { SunIcon } from './svgs/SunIcon'
 import { MoonIcon } from './svgs/MoonIcon'
 import { themeContext } from '@/contexts/ThemeContext'
 import { motion } from 'framer-motion'
-import { menuCollapse } from '@/libs/framer-motion/variants'
+import { menuCollapse } from '@/services/framer-motion/variants'
 
 export default function MenuHamburger() {
   const menuRef = useRef<HTMLDivElement>(null)

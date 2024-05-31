@@ -1,18 +1,17 @@
 import { DotGrid } from '@/components/DotGrid'
 import { Title } from '@/components/Title'
+import { getDocument } from '@/services/firebase/getDocument'
 import Image from 'next/image'
 
-export default function AboutMePage() {
+export default async function AboutMePage() {
+  const doc = await getDocument<{ description: string }>('about-me')
+
   return (
     <main className="full-viewport relative">
       <Title title="sobre mim" japTitle="私について" />
       <div className="flex flex-col lg:flex-row gap-3 xs:gap-8 xl:gap-14 items-center lg:items-start">
         <p className=" text-sm sm:text-2xl xs:px-3 lg:px-0 font-normal text-center lg:text-left">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras elementum elit sapien, at
-          sollicitudin lectus faucibus vitae. In a scelerisque ex. In sagittis purus et nisl commodo
-          tincidunt. Aenean pharetra tincidunt quam imperdiet tempus. Proin interdum mauris dolor,
-          dictum venenatis enim rhoncus eget. Nunc ornare a nisl id consequat. Suspendisse varius
-          eleifend dolor ac auctor.
+          {doc?.description ?? ''}
         </p>
         <Image
           className="w-50 h-50 xs:w-76 xs:h-76 xl:w-100 xl:h-100 rounded-lg outline border-4 border-dark dark:border-light"
