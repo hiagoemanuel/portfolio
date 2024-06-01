@@ -1,6 +1,7 @@
 import { DotGrid } from '@/components/DotGrid'
 import { ProjectCard } from '@/components/ProjectCard'
 import { Title } from '@/components/Title'
+import { getDocument } from '@/services/firebase/getDocument'
 
 const exempleProject = {
   name: 'Project',
@@ -19,8 +20,11 @@ function makeList<T>(obj: T, repeat: number): T[] {
   return list
 }
 
-export default function ProjectsPage() {
+export default async function ProjectsPage() {
   const projectList = makeList(exempleProject, 7)
+  const doc = await getDocument('landing-page', 'projects')
+
+  console.log(doc)
 
   return (
     <main className="full-viewport relative">
