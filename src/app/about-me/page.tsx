@@ -5,7 +5,7 @@ import { getImage } from '@/services/firebase/getImage'
 import Image from 'next/image'
 
 export default async function AboutMePage() {
-  const doc = await getDocument<{ description: string; image: string }>('landing-page', 'about-me')
+  const doc = await getDocument<{ description: string; image: string }>('single-page', 'about-me')
   if (!doc) throw new Error()
   const image = await getImage(doc.image)
 

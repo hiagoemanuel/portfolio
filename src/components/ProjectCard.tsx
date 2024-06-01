@@ -36,6 +36,7 @@ export const ProjectCard = ({
         <Link
           className="w-21 sm:w-32 h-8 sm:h-12 rounded-lg sm:rounded-xl bg-dark dark:bg-light flex justify-center items-center"
           href={links.toView}
+          target="_blank"
         >
           <div className="w-7 sm:w-9 h-7 sm:h-9">
             <EyeIcon />
@@ -44,6 +45,7 @@ export const ProjectCard = ({
         <Link
           className="w-21 sm:w-32 h-8 sm:h-12 rounded-lg sm:rounded-xl bg-dark dark:bg-light flex justify-center items-center"
           href={links.repository}
+          target="_blank"
         >
           <div className="w-7 sm:w-9 h-7 sm:h-9">
             <Github />

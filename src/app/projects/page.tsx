@@ -1,44 +1,29 @@
 import { DotGrid } from '@/components/DotGrid'
 import { ProjectCard } from '@/components/ProjectCard'
+import { type ProjectInterface } from '@/components/ProjectCarousel'
 import { Title } from '@/components/Title'
 import { getDocument } from '@/services/firebase/getDocument'
-
-const exempleProject = {
-  name: 'Project',
-  image: '/project-exemple.jpg',
-  description:
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras elementum elit sapien, at sollicitudin lectus faucibus vitae. In a scelerisque ex.',
-  links: {
-    toView: '/',
-    repository: '/',
-  },
-}
-
-function makeList<T>(obj: T, repeat: number): T[] {
-  const list: T[] = []
-  for (let i = 0; i < repeat; i++) list.push(obj)
-  return list
-}
+import { getImage } from '@/services/firebase/getImage'
 
 export default async function ProjectsPage() {
-  const projectList = makeList(exempleProject, 7)
-  const doc = await getDocument('landing-page', 'projects')
-
-  console.log(doc)
+  const docRef = await getDocument<{ list: ProjectInterface[] }>('single-page', 'projects')
 
   return (
     <main className="full-viewport relative">
       <Title title="projetos" japTitle="プロジェクト" />
       <div className="flex flex-wrap justify-center gap-2 md:gap-7">
-        {projectList.map((p, i) => (
-          <ProjectCard
-            thumbnail={p.image}
-            name={p.name}
-            description={p.description}
-            links={p.links}
-            key={i}
-          />
-        ))}
+        {docRef?.list.map(async (p, i) => {
+          const image = await getImage(p.image)
+          return (
+            <ProjectCard
+              thumbnail={image}
+              name={p.title}
+              description={p.description}
+              links={p.links}
+              key={i}
+            />
+          )
+        })}
       </div>
       <DotGrid
         className="hidden md:flex"

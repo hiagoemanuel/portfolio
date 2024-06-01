@@ -2,28 +2,21 @@
 
 import { useRef, useState } from 'react'
 import { ProjectCard } from './ProjectCard'
+import { getImage } from '@/services/firebase/getImage'
 
 type MouseEventType = React.MouseEvent<HTMLInputElement>
 
-const exempleProject = {
-  name: 'Project',
-  image: '/project-exemple.jpg',
-  description:
-    'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras elementum elit sapien, at sollicitudin lectus faucibus vitae. In a scelerisque ex.',
+export interface ProjectInterface {
+  title: string
+  image: string
+  description: string
   links: {
-    toView: '/',
-    repository: '/',
-  },
+    toView: string
+    repository: string
+  }
 }
 
-function makeList<T>(obj: T, repeat: number): T[] {
-  const list: T[] = []
-  for (let i = 0; i < repeat; i++) list.push(obj)
-  return list
-}
-
-export const ProjectCarousel = () => {
-  const projectList = makeList(exempleProject, 3)
+export const ProjectCarousel = ({ projectList }: { projectList: ProjectInterface[] }) => {
   const wrapperRef = useRef<HTMLDivElement>(null)
   const [draggable, setDraggable] = useState<boolean>(false)
   const [initScroll, setInitScroll] = useState<{ scrollLeft: number; pageX: number }>()
@@ -58,15 +51,18 @@ export const ProjectCarousel = () => {
         }}
       >
         <div />
-        {projectList.map((p, i) => (
-          <ProjectCard
-            name={p.name}
-            thumbnail={p.image}
-            description={p.description}
-            links={p.links}
-            key={i}
-          />
-        ))}
+        {projectList.map(async (p, i) => {
+          const image = await getImage(p.image)
+          return (
+            <ProjectCard
+              name={p.title}
+              thumbnail={image}
+              description={p.description}
+              links={p.links}
+              key={i}
+            />
+          )
+        })}
         <div />
       </div>
     </div>

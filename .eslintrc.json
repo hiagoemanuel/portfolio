@@ -20,10 +20,6 @@
     "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/space-before-function-paren": "off",
     "@typescript-eslint/strict-boolean-expressions": "off",
-    "space-before-function-paren": [
-      "error",
-      "never"
-    ],
     "prettier/prettier": "error"
   }
 }
