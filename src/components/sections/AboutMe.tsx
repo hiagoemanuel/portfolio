@@ -1,19 +1,16 @@
+import { getDocument } from '@/services/firebase/getDocument'
 import { Container } from '../Container'
 import { DotGrid } from '../DotGrid'
 import { MoreAboutButton } from '../MoreAboutButton'
 import { Title } from '../Title'
 
-export const AboutMe = () => {
+export const AboutMe = async () => {
+  const doc = await getDocument<{ description: string; image: string }>('landing-page', 'about-me')
+
   return (
     <Container>
       <Title title="sobre mim" japTitle="私について" />
-      <p className="text-sm sm:text-2xl font-normal text-center lg:text-left">
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras elementum elit sapien, at
-        sollicitudin lectus faucibus vitae. In a scelerisque ex. In sagittis purus et nisl commodo
-        tincidunt. Aenean pharetra tincidunt quam imperdiet tempus. Proin interdum mauris dolor,
-        dictum venenatis enim rhoncus eget. Nunc ornare a nisl id consequat. Suspendisse varius
-        eleifend dolor ac auctor.
-      </p>
+      <p className="text-sm sm:text-2xl font-normal text-center lg:text-left">{doc?.description}</p>
       <MoreAboutButton text="veja mais sobre" path="/about-me" />
       <DotGrid
         position={['bottom', 'right']}
