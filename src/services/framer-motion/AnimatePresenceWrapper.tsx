@@ -10,8 +10,8 @@ export const AnimatePresenceWrapper = ({ children }: { children: React.ReactNode
     <AnimatePresence mode="wait" initial={false}>
       <motion.div key={path}>
         <motion.div
-          initial={{ opacity: 0 }}
-          animate={{ opacity: 1, transition: { delay: 0.5 } }}
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0, transition: { delay: 0.5 } }}
           exit={{ opacity: 0 }}
           style={{ opacity: 0 }}
         >
