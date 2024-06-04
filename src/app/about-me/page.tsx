@@ -6,7 +6,7 @@ import Image from 'next/image'
 
 export default async function AboutMePage() {
   const doc = await getDocument<{ description: string; image: string }>('single-page', 'about-me')
-  if (!doc) throw new Error()
+  if (!doc) throw new Error('about-me document was not found')
   const image = await getImage(doc.image)
 
   return (
