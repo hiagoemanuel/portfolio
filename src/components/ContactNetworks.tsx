@@ -1,18 +1,9 @@
 import Link from 'next/link'
 import { getDocument } from '@/services/firebase/getDocument'
-
-interface ContactInterface {
-  email: string
-  networks: Array<{
-    media: string
-    href: string
-    icon: string
-    slug: string
-  }>
-}
+import { type ContatctDoc } from '@/services/firebase/documents'
 
 export const ContactNetworks = async () => {
-  const docRef = await getDocument<ContactInterface>('core-info', 'contact')
+  const docRef = await getDocument<ContatctDoc>('core-info', 'contact')
 
   return (
     <div className="flex flex-col lg:items-start lg:self-start gap-3 sm:gap-6 items-center">

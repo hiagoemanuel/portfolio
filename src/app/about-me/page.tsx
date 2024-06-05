@@ -1,12 +1,12 @@
 import { DotGrid } from '@/components/DotGrid'
 import { Title } from '@/components/Title'
+import { type AboutMeDoc } from '@/services/firebase/documents'
 import { getDocument } from '@/services/firebase/getDocument'
 import { getImage } from '@/services/firebase/getImage'
 import Image from 'next/image'
 
 export default async function AboutMePage() {
-  const doc = await getDocument<{ description: string; image: string }>('single-page', 'about-me')
-  if (!doc) throw new Error('about-me document was not found')
+  const doc = await getDocument<AboutMeDoc>('single-page', 'about-me')
   const image = await getImage(doc.image)
 
   return (

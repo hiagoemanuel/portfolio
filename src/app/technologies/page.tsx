@@ -1,13 +1,11 @@
 import { DotGrid } from '@/components/DotGrid'
 import { TechCard } from '@/components/TechCard'
 import { Title } from '@/components/Title'
+import { type TechnologiesDoc } from '@/services/firebase/documents'
 import { getDocument } from '@/services/firebase/getDocument'
 
 export default async function TechnologiesPage() {
-  const docRef = await getDocument<{ list: Array<{ icon: string; name: string }> }>(
-    'single-page',
-    'technologies',
-  )
+  const docRef = await getDocument<TechnologiesDoc>('single-page', 'technologies')
 
   return (
     <main className="full-viewport relative">

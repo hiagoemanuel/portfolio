@@ -7,17 +7,10 @@ import { CurriculumIcon } from '../svgs/CurriculumIcon'
 import { Github } from '../svgs/Github'
 import { Linkedin } from '../svgs/Linkedin'
 import { motion } from 'framer-motion'
-
-interface HeroInterface {
-  links: {
-    curriculum: string
-    github: string
-    linkedin: string
-  }
-}
+import { type HeroDoc } from '@/services/firebase/documents'
 
 export const Hero = async () => {
-  const docRef = await getDocument<HeroInterface>('core-info', 'hero')
+  const docRef = await getDocument<HeroDoc>('core-info', 'hero')
 
   return (
     <section className="w-full h-svh sm:h-[calc(100svh-4rem)] pb-5 flex flex-col justify-center items-center gap-6">

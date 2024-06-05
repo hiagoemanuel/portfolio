@@ -1,12 +1,12 @@
 import { DotGrid } from '@/components/DotGrid'
 import { ProjectCard } from '@/components/ProjectCard'
-import { type ProjectInterface } from '@/components/ProjectCarousel'
 import { Title } from '@/components/Title'
+import { type ProjectsDoc } from '@/services/firebase/documents'
 import { getDocument } from '@/services/firebase/getDocument'
 import { getImage } from '@/services/firebase/getImage'
 
 export default async function ProjectsPage() {
-  const docRef = await getDocument<{ list: ProjectInterface[] }>('single-page', 'projects')
+  const docRef = await getDocument<ProjectsDoc>('single-page', 'projects')
 
   return (
     <main className="full-viewport relative">
