@@ -12,7 +12,7 @@ interface IFormInput {
 }
 
 export const ContactForm = () => {
-  const { handleSubmit, register } = useForm<IFormInput>()
+  const { handleSubmit, register, reset } = useForm<IFormInput>()
   const [message, setMessage] = useState<string>()
   const [sending, setSending] = useState<boolean>(false)
 
@@ -21,19 +21,19 @@ export const ContactForm = () => {
     try {
       for (const input in data) {
         const dataIndex = data[input as keyof IFormInput]
-
         if (dataIndex.trim() === '' && input !== 'subject') {
           setMessage('por favor, preencha todos os campos com *')
-          setSending(false)
           return
         }
       }
       await sendEmailJs({ user: 'Hiago', ...data })
       setMessage('email enviado com sucesso!')
+      reset()
     } catch {
       setMessage('estamos com problemas para enviar seu email')
+    } finally {
+      setSending(false)
     }
-    setSending(false)
   }
 
   return (
@@ -52,7 +52,8 @@ export const ContactForm = () => {
       />
       <div>
         <input
-          className={`w-full input-form cursor-pointer text-xl font-bold ${sending ? 'bg-main/50' : ''}`}
+          className={`${sending ? 'bg-main/50' : ''} w-full input-form cursor-pointer text-xl font-bold`}
+          disabled={sending}
           type="submit"
           value="enviar email"
         />
