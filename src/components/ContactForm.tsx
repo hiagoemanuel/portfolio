@@ -2,6 +2,7 @@
 
 import { type SubmitHandler, useForm } from 'react-hook-form'
 import { sendEmailJs } from '@/services/emailjs/config'
+import { useState } from 'react'
 
 interface IFormInput {
   name: string
@@ -12,16 +13,27 @@ interface IFormInput {
 
 export const ContactForm = () => {
   const { handleSubmit, register } = useForm<IFormInput>()
+  const [message, setMessage] = useState<string>()
+  const [sending, setSending] = useState<boolean>(false)
 
   const sendEmail: SubmitHandler<IFormInput> = async (data) => {
-    const templateParams = {
-      user: 'Hiago',
-      name: data.name,
-      email: data.email,
-      subject: data.subject,
-      message: data.message,
+    setSending(true)
+    try {
+      for (const input in data) {
+        const dataIndex = data[input as keyof IFormInput]
+
+        if (dataIndex.trim() === '' && input !== 'subject') {
+          setMessage('por favor, preencha todos os campos com *')
+          setSending(false)
+          return
+        }
+      }
+      await sendEmailJs({ user: 'Hiago', ...data })
+      setMessage('email enviado com sucesso!')
+    } catch {
+      setMessage('estamos com problemas para enviar seu email')
     }
-    await sendEmailJs(templateParams)
+    setSending(false)
   }
 
   return (
@@ -38,11 +50,16 @@ export const ContactForm = () => {
         placeholder="mensagem *"
         {...register('message')}
       />
-      <input
-        className="input-form cursor-pointer text-xl font-bold"
-        type="submit"
-        value="enviar email"
-      />
+      <div>
+        <input
+          className={`w-full input-form cursor-pointer text-xl font-bold ${sending ? 'bg-main/50' : ''}`}
+          type="submit"
+          value="enviar email"
+        />
+        <p className="text-center text-main text-sm sm:text-base">
+          {message ?? <span className="invisible">content</span>}
+        </p>
+      </div>
     </form>
   )
 }
