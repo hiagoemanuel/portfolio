@@ -7,7 +7,7 @@ export const AnimatePresenceWrapper = ({ children }: { children: React.ReactNode
   const path = usePathname()
 
   return (
-    <AnimatePresence mode="wait" initial={false}>
+    <AnimatePresence mode="wait">
       <motion.div key={path}>
         <motion.div
           initial={{ opacity: 0, y: 50 }}
