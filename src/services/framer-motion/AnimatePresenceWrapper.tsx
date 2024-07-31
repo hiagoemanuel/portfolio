@@ -13,7 +13,7 @@ export const AnimatePresenceWrapper = ({ children }: { children: React.ReactNode
           initial={{ opacity: 0, y: 50 }}
           animate={{ opacity: 1, y: 0, transition: { delay: 0.5 } }}
           exit={{ opacity: 0 }}
-          style={{ opacity: 0 }}
+          style={{ opacity: 0, display: 'flex' }}
         >
           {children}
         </motion.div>
