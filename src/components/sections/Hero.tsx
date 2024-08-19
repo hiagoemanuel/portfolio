@@ -1,17 +1,13 @@
 'use client'
 
-import { getDocument } from '@/services/firebase/getDocument'
 import { ContactButton } from '../ContactButton'
 import { Arrow } from '../svgs/Arrow'
 import { CurriculumIcon } from '../svgs/CurriculumIcon'
 import { Github } from '../svgs/Github'
 import { Linkedin } from '../svgs/Linkedin'
 import { motion } from 'framer-motion'
-import { type HeroDoc } from '@/services/firebase/documents'
 
-export const Hero = async () => {
-  const docRef = await getDocument<HeroDoc>('core-info', 'hero')
-
+export const Hero = () => {
   return (
     <section className="w-full h-svh sm:h-[calc(100svh-4rem)] pb-5 flex flex-col justify-center items-center gap-6">
       <div className="flex flex-col grow justify-center">
@@ -30,9 +26,10 @@ export const Hero = async () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 1.25, type: 'tween', duration: 0.5, ease: 'easeInOut' }}
           >
-            <ContactButton href={docRef?.links.github ?? ''} icon={<Github />} />
-            <ContactButton href={docRef?.links.linkedin ?? ''} icon={<Linkedin />} />
-            <ContactButton href={docRef?.links.curriculum ?? ''} icon={<CurriculumIcon />} />
+            {/* contact_reference */}
+            <ContactButton href={''} icon={<Github />} />
+            <ContactButton href={''} icon={<Linkedin />} />
+            <ContactButton href={''} icon={<CurriculumIcon />} />
           </motion.div>
         </motion.div>
         <motion.h1

@@ -1,15 +1,11 @@
-import { getDocument } from '@/services/firebase/getDocument'
 import { Container } from '../Container'
 import { DotGrid } from '../DotGrid'
 import { MoreAboutButton } from '../MoreAboutButton'
 import { TechCard } from '../TechCard'
 import { Title } from '../Title'
 
-export const Technologies = async () => {
-  const docRef = await getDocument<{ list: Array<{ icon: string; name: string }> }>(
-    'landing-page',
-    'technologies',
-  )
+export const Technologies = () => {
+  const docRef = [{ icon: 'icon', name: 'name' }]
 
   return (
     <Container>
@@ -18,7 +14,10 @@ export const Technologies = async () => {
         Essas são as principais tecnologias que costumo utilizar.
       </p>
       <div className="grid grid-cols-[repeat(2,max-content)] lg:grid-cols-[repeat(3,max-content)] grid-rows-3 lg:grid-rows-2 gap-2 lg:gap-5 justify-center">
-        {docRef?.list.map((t, i) => <TechCard {...t} key={i} />)}
+        {/* technology */}
+        {docRef.map((t, i) => (
+          <TechCard {...t} key={i} />
+        ))}
       </div>
       <MoreAboutButton text="veja todas tecnologias" path="/technologies" />
       <DotGrid

@@ -1,25 +1,20 @@
 import { DotGrid } from '@/components/DotGrid'
 import { ProjectCard } from '@/components/ProjectCard'
 import { Title } from '@/components/Title'
-import { type ProjectsDoc } from '@/services/firebase/documents'
-import { getDocument } from '@/services/firebase/getDocument'
-import { getImage } from '@/services/firebase/getImage'
 
-export default async function ProjectsPage() {
-  const docRef = await getDocument<ProjectsDoc>('single-page', 'projects')
-
+export default function ProjectsPage() {
+  const docRef = [{}]
   return (
     <main className="full-viewport relative">
       <Title title="projetos" japTitle="プロジェクト" />
       <div className="flex flex-wrap justify-center gap-2 md:gap-7">
-        {docRef?.list.map(async (p, i) => {
-          const image = await getImage(p.image)
+        {docRef.map(async (p, i) => {
           return (
             <ProjectCard
-              thumbnail={image}
-              name={p.title}
-              description={p.description}
-              links={p.links}
+              thumbnail={''}
+              name={'p.title'}
+              description={'p.description'}
+              links={{ toView: '', repository: '' }}
               key={i}
             />
           )
