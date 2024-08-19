@@ -1,0 +1,58 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model about_me {
+  id              Int     @id @default(autoincrement())
+  resume          String  @db.VarChar(240)
+  description     String  @db.VarChar(380)
+  profile_picture String?
+}
+
+model contact {
+  id             Int            @id
+  reference_link reference_link @relation(fields: [id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+}
+
+model contact_email {
+  email String @id @db.VarChar(70)
+}
+
+model featured_project {
+  project_id Int     @id
+  project    project @relation(fields: [project_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+}
+
+model featured_technology {
+  technology_id Int        @id
+  technology    technology @relation(fields: [technology_id], references: [id], onDelete: NoAction, onUpdate: NoAction)
+}
+
+model project {
+  id               Int               @id @default(autoincrement())
+  title            String            @db.VarChar(20)
+  description      String?           @db.VarChar(160)
+  url_repository   String
+  url_view         String
+  thumbnail        String?
+  featured_project featured_project?
+}
+
+model reference_link {
+  id      Int      @id @default(autoincrement())
+  name    String   @db.VarChar(20)
+  url     String
+  contact contact?
+}
+
+model technology {
+  id                  Int                  @id @default(autoincrement())
+  name                String               @db.VarChar(20)
+  icon                String
+  featured_technology featured_technology?
+}
