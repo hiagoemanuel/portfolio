@@ -1,19 +1,21 @@
 import { DotGrid } from '@/components/DotGrid'
 import { Title } from '@/components/Title'
+import prisma from '@/services/prisma'
 import Image from 'next/image'
 
-export default function AboutMePage() {
+export default async function AboutMePage() {
+  const data = await prisma.about_me.findFirst()
+
   return (
     <main className="full-viewport relative">
       <Title title="sobre mim" japTitle="私について" />
       <div className="flex flex-col lg:flex-row gap-3 xs:gap-8 xl:gap-14 items-center lg:items-start">
-        {/* about_me */}
         <p className=" text-sm sm:text-2xl xs:px-3 lg:px-0 font-normal text-center lg:text-left">
-          {'doc.description'}
+          {data?.description}
         </p>
         <Image
           className="w-50 h-50 xs:w-76 xs:h-76 xl:w-100 xl:h-100 rounded-lg outline border-4 border-dark dark:border-light"
-          src={'/'}
+          src={data?.profile_picture ?? ''}
           alt="about me picture"
           width={400}
           height={400}

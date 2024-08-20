@@ -1,15 +1,16 @@
 import { DotGrid } from '@/components/DotGrid'
 import { TechCard } from '@/components/TechCard'
 import { Title } from '@/components/Title'
+import prisma from '@/services/prisma'
 
-export default function TechnologiesPage() {
-  const docRef = [{ name: 'name', icon: 'icon' }]
+export default async function TechnologiesPage() {
+  const data = await prisma.technology.findMany()
 
   return (
     <main className="full-viewport relative">
       <Title title="tecnologias" japTitle="テクノロジー" />
       <div className="grid gap-2 xs:gap-5 justify-center grid-cols-[repeat(2,_9.25rem)] xs:grid-cols-[repeat(2,_12rem)] sm:grid-cols-[repeat(auto-fill,_19rem)]">
-        {docRef.map((t, i) => (
+        {data.map((t, i) => (
           <TechCard singlePage {...t} key={i} />
         ))}
       </div>

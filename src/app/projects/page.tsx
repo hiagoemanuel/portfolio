@@ -1,21 +1,23 @@
 import { DotGrid } from '@/components/DotGrid'
 import { ProjectCard } from '@/components/ProjectCard'
 import { Title } from '@/components/Title'
+import prisma from '@/services/prisma'
 
-export default function ProjectsPage() {
-  const docRef = [{}]
+export default async function ProjectsPage() {
+  const data = await prisma.project.findMany()
+
   return (
     <main className="full-viewport relative">
       <Title title="projetos" japTitle="プロジェクト" />
       <div className="flex flex-wrap justify-center gap-2 md:gap-7">
-        {docRef.map(async (p, i) => {
+        {data.map(async (p) => {
           return (
             <ProjectCard
-              thumbnail={''}
-              name={'p.title'}
-              description={'p.description'}
-              links={{ toView: '', repository: '' }}
-              key={i}
+              thumbnail={p.thumbnail}
+              name={p.title}
+              description={p.description}
+              links={{ toView: p.url_view, repository: p.url_repository }}
+              key={p.id}
             />
           )
         })}
