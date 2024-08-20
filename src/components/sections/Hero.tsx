@@ -1,6 +1,5 @@
 'use client'
 
-import axios from 'axios'
 import { ContactButton } from '../ContactButton'
 import { Arrow } from '../svgs/Arrow'
 import { CurriculumIcon } from '../svgs/CurriculumIcon'
@@ -8,15 +7,26 @@ import { Github } from '../svgs/Github'
 import { Linkedin } from '../svgs/Linkedin'
 import { motion } from 'framer-motion'
 import { useEffect, useState } from 'react'
-import { type IReferenceLinks } from '@/app/api/reference-links/route'
+import { type reference_link as ReferenceLinkType } from '@prisma/client'
+import axios from 'axios'
+
+interface LinksType {
+  github: ReferenceLinkType | undefined
+  linkedin: ReferenceLinkType | undefined
+  curriculum: ReferenceLinkType | undefined
+}
 
 export const Hero = () => {
-  const [data, setData] = useState<IReferenceLinks>()
+  const [data, setData] = useState<LinksType>()
 
   useEffect(() => {
     const fetch = async () => {
-      const res = await axios.get<IReferenceLinks>('/api/reference-links')
-      setData(res.data)
+      const { data: res } = await axios.get<ReferenceLinkType[]>('/api/all-links')
+      setData({
+        github: res.find((d) => d.name === 'github'),
+        linkedin: res.find((d) => d.name === 'linkedin'),
+        curriculum: res.find((d) => d.name === 'curriculum'),
+      })
     }
     fetch()
   }, [])
