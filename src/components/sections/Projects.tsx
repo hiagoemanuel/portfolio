@@ -1,28 +1,25 @@
+import prisma from '@/services/prisma'
 import { Container } from '../Container'
 import { DotGrid } from '../DotGrid'
 import { MoreAboutButton } from '../MoreAboutButton'
-import { ProjectCarousel, type ProjectInterface } from '../ProjectCarousel'
+import { ProjectCarousel } from '../ProjectCarousel'
 import { Title } from '../Title'
 
-export const Projects = () => {
-  const doc: ProjectInterface[] = [
-    {
-      description: 'description',
-      image: 'img',
-      links: {
-        repository: '/',
-        toView: '/',
+export const Projects = async () => {
+  const data = await prisma.project.findMany({
+    where: {
+      featured_project: {
+        project_id: { not: undefined },
       },
-      title: 'title',
     },
-  ]
+  })
 
   return (
     <Container>
       <Title title="projetos" japTitle="プロジェクト" />
       {/* project */}
-      {doc ? (
-        <ProjectCarousel projectList={doc} />
+      {data ? (
+        <ProjectCarousel projectList={data} />
       ) : (
         <div className="flex justify-center py-6">
           <p className="text-2xl font-bold text-main">Os dados não foram encontrados :(</p>

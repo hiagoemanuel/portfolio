@@ -47,6 +47,7 @@ model reference_link {
   id      Int      @id @default(autoincrement())
   name    String   @db.VarChar(20)
   url     String
+  icon    String
   contact contact?
 }
 

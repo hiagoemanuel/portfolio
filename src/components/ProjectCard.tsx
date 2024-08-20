@@ -5,8 +5,8 @@ import Image from 'next/image'
 
 interface ProjectCardProps {
   name: string
-  thumbnail: string
-  description: string
+  thumbnail: string | null
+  description: string | null
   links: {
     toView: string
     repository: string
@@ -28,7 +28,7 @@ export const ProjectCard = ({
       <div className="text-light dark:text-dark">
         <Image
           className="w-full h-30 sm:h-64 mb-1 relative rounded-lg overflow-y-hidden transition-[background] bg-cover duration-1000 ease-linear hover:bg-bottom"
-          src={thumbnail}
+          src={thumbnail ?? ''}
           width={300}
           height={168}
           alt={name}

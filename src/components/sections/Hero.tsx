@@ -1,13 +1,26 @@
 'use client'
 
+import axios from 'axios'
 import { ContactButton } from '../ContactButton'
 import { Arrow } from '../svgs/Arrow'
 import { CurriculumIcon } from '../svgs/CurriculumIcon'
 import { Github } from '../svgs/Github'
 import { Linkedin } from '../svgs/Linkedin'
 import { motion } from 'framer-motion'
+import { useEffect, useState } from 'react'
+import { type IReferenceLinks } from '@/app/api/reference-links/route'
 
 export const Hero = () => {
+  const [data, setData] = useState<IReferenceLinks>()
+
+  useEffect(() => {
+    const fetch = async () => {
+      const res = await axios.get<IReferenceLinks>('/api/reference-links')
+      setData(res.data)
+    }
+    fetch()
+  }, [])
+
   return (
     <section className="w-full h-svh sm:h-[calc(100svh-4rem)] pb-5 flex flex-col justify-center items-center gap-6">
       <div className="flex flex-col grow justify-center">
@@ -26,10 +39,9 @@ export const Hero = () => {
             animate={{ opacity: 1 }}
             transition={{ delay: 1.25, type: 'tween', duration: 0.5, ease: 'easeInOut' }}
           >
-            {/* contact_reference */}
-            <ContactButton href={''} icon={<Github />} />
-            <ContactButton href={''} icon={<Linkedin />} />
-            <ContactButton href={''} icon={<CurriculumIcon />} />
+            <ContactButton href={data?.github?.url ?? ''} icon={<Github />} />
+            <ContactButton href={data?.linkedin?.url ?? ''} icon={<Linkedin />} />
+            <ContactButton href={data?.curriculum?.url ?? ''} icon={<CurriculumIcon />} />
           </motion.div>
         </motion.div>
         <motion.h1

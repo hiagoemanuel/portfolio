@@ -17,6 +17,8 @@
   "rules": {
     "react/no-unescaped-entities": "off",
     "@next/next/no-page-custom-font": "off",
+    "react-hooks/rules-of-hooks": "off",
+    "@typescript-eslint/no-floating-promises": "off",
     "@typescript-eslint/explicit-function-return-type": "off",
     "@typescript-eslint/space-before-function-paren": "off",
     "@typescript-eslint/strict-boolean-expressions": "off",

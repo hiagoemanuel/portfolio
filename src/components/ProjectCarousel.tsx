@@ -1,13 +1,12 @@
 import { ProjectCard } from './ProjectCard'
 
 export interface ProjectInterface {
+  id: number
   title: string
-  image: string
-  description: string
-  links: {
-    toView: string
-    repository: string
-  }
+  description: string | null
+  url_repository: string
+  url_view: string
+  thumbnail: string | null
 }
 
 export const ProjectCarousel = ({ projectList }: { projectList: ProjectInterface[] }) => {
@@ -19,9 +18,9 @@ export const ProjectCarousel = ({ projectList }: { projectList: ProjectInterface
           return (
             <ProjectCard
               name={p.title}
-              thumbnail={''}
+              thumbnail={p.thumbnail}
               description={p.description}
-              links={p.links}
+              links={{ repository: p.url_repository, toView: p.url_view }}
               key={i}
             />
           )
