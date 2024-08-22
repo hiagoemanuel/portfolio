@@ -4,7 +4,7 @@ import { Title } from '@/components/Title'
 import prisma from '@/services/prisma'
 
 export default async function ProjectsPage() {
-  const data = await prisma.project.findMany()
+  const data = await prisma.project.findMany({ orderBy: { index: 'asc' } })
 
   return (
     <main className="full-viewport relative">

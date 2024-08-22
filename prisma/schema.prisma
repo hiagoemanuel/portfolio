@@ -40,6 +40,7 @@ model project {
   url_repository   String
   url_view         String
   thumbnail        String?
+  index            Int
   featured_project featured_project?
 }
 
@@ -55,5 +56,6 @@ model technology {
   id                  Int                  @id @default(autoincrement())
   name                String               @db.VarChar(20)
   icon                String
+  index               Int
   featured_technology featured_technology?
 }
