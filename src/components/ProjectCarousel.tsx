@@ -13,7 +13,6 @@ export const ProjectCarousel = ({ projectList }: { projectList: ProjectInterface
   return (
     <div className="flex justify-center">
       <div className="flex flex-wrap justify-center gap-4 transition-all">
-        {/* project */}
         {projectList.map(async (p, i) => {
           return (
             <ProjectCard

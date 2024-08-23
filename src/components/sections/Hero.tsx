@@ -32,7 +32,7 @@ export const Hero = () => {
   }, [])
 
   return (
-    <section className="w-full h-svh sm:h-[calc(100svh-4rem)] pb-5 flex flex-col justify-center items-center gap-6">
+    <section className="w-full h-svh sm:h-[calc(100svh-4rem)] pb-16 sm:pb-5 flex flex-col justify-center items-center gap-6">
       <div className="flex flex-col grow justify-center">
         <motion.div
           className="flex items-end"
@@ -71,7 +71,10 @@ export const Hero = () => {
           front-end developer
         </motion.h6>
       </div>
-      <div className="w-9 h-20 min-h-20 sm:w-14 sm:h-26 sm:min-h-24 p-1 bg-dark dark:bg-light rounded-lg">
+      <div
+        className="w-9 h-20 min-h-20 sm:w-14 sm:h-26 sm:min-h-24 p-1 bg-dark dark:bg-light rounded-lg cursor-pointer"
+        onClick={() => window.scroll({ top: 600 })}
+      >
         <div className="w-full h-8 p-2 sm:h-12 sm:p-3 flex bg-light dark:bg-dark rounded-lg justify-center items-center">
           <Arrow />
         </div>

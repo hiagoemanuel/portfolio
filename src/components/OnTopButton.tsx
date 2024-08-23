@@ -15,7 +15,7 @@ export const OnTopButton = () => {
     <AnimatePresence>
       {pageYPosition > 650 && (
         <motion.button
-          className="w-12 sm:w-14 h-12 sm:h-14 p-3 border border-light dark:border-dark bg-dark dark:bg-light rounded-xl fixed bottom-5 right-5"
+          className="w-12 sm:w-14 h-12 sm:h-14 p-3 border border-light dark:border-dark bg-dark dark:bg-light rounded-xl fixed bottom-16 sm:bottom-5 right-5"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           exit={{ opacity: 0 }}

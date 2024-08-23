@@ -18,7 +18,7 @@ export const AnimatePresenceWrapper = ({ children }: { children: React.ReactNode
           {children}
         </motion.div>
         <motion.div
-          className="fixed top-0 left-0 bottom-0 right-0 w-full h-svh bg-[#c9c3b4] dark:bg-[#111111]"
+          className="fixed top-0 left-0 bottom-0 right-0 w-full h-dvh bg-[#c9c3b4] dark:bg-[#111111]"
           initial={{ scaleX: 1, originX: 'right' }}
           animate={{ scaleX: 0, transition: { duration: 0.75, ease: 'circOut' } }}
           exit={{ scaleX: 1, originX: 'left', transition: { duration: 0.75, ease: 'circIn' } }}

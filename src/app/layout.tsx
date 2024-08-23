@@ -1,13 +1,13 @@
 import type { Metadata } from 'next'
 import { Noto_Sans } from 'next/font/google'
 import './globals.css'
-import MenuCollapse from '@/components/MenuCollapse'
 import { Header } from '@/components/Header'
 import { ThemeProvider } from '@/contexts/ThemeContext'
 import { cookies } from 'next/headers'
 import { Footer } from '@/components/sections/Footer'
 import { OnTopButton } from '@/components/OnTopButton'
 import { AnimatePresenceWrapper } from '@/services/framer-motion/AnimatePresenceWrapper'
+import MobileHeader from '@/components/MobileHeader'
 
 const notoSans = Noto_Sans({
   subsets: ['latin'],
@@ -39,11 +39,11 @@ export default function RootLayout({
   return (
     <html lang="pt-BR" className="scroll-smooth overflow-x-hidden">
       <body
-        className={`${notoSans.className} bg-light dark:bg-dark text-dark dark:text-light relative`}
+        className={`${notoSans.className} mb-14 sm:mb-0 bg-light dark:bg-dark text-dark dark:text-light relative`}
       >
         <ThemeProvider>
           <Header />
-          <MenuCollapse />
+          <MobileHeader />
         </ThemeProvider>
         <AnimatePresenceWrapper>{children}</AnimatePresenceWrapper>
         <OnTopButton />
