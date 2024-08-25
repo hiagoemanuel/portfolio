@@ -10,7 +10,9 @@ export const AboutMe = async () => {
   return (
     <Container>
       <Title title="sobre mim" japTitle="私について" />
-      <p className="text-sm sm:text-2xl font-normal text-center lg:text-left">{data?.resume}</p>
+      <p className="max-w-6xl text-sm sm:text-2xl font-normal text-center lg:text-left">
+        {data?.resume}
+      </p>
       <MoreAboutButton text="veja mais sobre" path="/about-me" />
       <DotGrid
         position={['bottom', 'right']}

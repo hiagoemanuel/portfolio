@@ -14,7 +14,11 @@ export default function MobileHeader() {
   const [isOpen, setIsOpen] = useState<boolean>(false)
   const MenuRef = useRef<HTMLDivElement>(null)
 
-  const handleMenu = () => setIsOpen(!isOpen)
+  const handleMenu = () => {
+    document.documentElement.classList.toggle('overflow-y-hidden')
+    document.documentElement.classList.toggle('sm:overflow-y-auto')
+    setIsOpen(!isOpen)
+  }
 
   const clickOutSite = (event: React.MouseEvent<HTMLElement>) => {
     const menu = MenuRef.current
