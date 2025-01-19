@@ -9,7 +9,7 @@ export default async function ProjectsPage() {
   return (
     <main className="full-viewport relative">
       <Title title="projetos" japTitle="プロジェクト" />
-      <div className="flex flex-wrap justify-center gap-2 md:gap-7">
+      <div className="md:gap-7 sm:grid-cols-[repeat(auto-fill,19rem)] grid gap-2 justify-center grid-cols-[repeat(auto-fill,14rem)]">
         {data.map(async (p) => {
           return (
             <ProjectCard
